@@ -1,0 +1,51 @@
+@font-face {
+    font-family: PFDinTextCondPro-Bold;
+	src: url("../fonts/PFDinTextCondPro-Bold.eot");
+	src: url("../fonts/PFDinTextCondPro-Bold.svg") format('svg'),
+		url("../fonts/PFDinTextCondPro-Bold.ttf") format('truetype'),		
+		url("../fonts/PFDinTextCondPro-Bold.otf") format("opentype"),
+		url("../fonts/PFDinTextCondPro-Bold.woff") format("woff");
+   }
+
+@font-face {
+    font-family: PFDinTextCondPro-Regular;
+	src: url("../fonts/PFDinTextCondPro-Regular.eot");
+	src: url("../fonts/PFDinTextCondPro-Regular.svg") format('svg'),
+		url("../fonts/PFDinTextCondPro-Regular.ttf") format('truetype'),		
+		url("../fonts/PFDinTextCondPro-Regular.otf") format("opentype"),
+		url("../fonts/PFDinTextCondPro-Regular.woff") format("woff");
+   }
+
+@font-face {
+    font-family: PFDinTextCondPro-XBlack;
+	src: url("../fonts/PFDinTextCondPro-XBlack.eot");
+	src: url("../fonts/PFDinTextCondPro-XBlack.svg") format('svg'),
+		url("../fonts/PFDinTextCondPro-XBlack.ttf") format('truetype'),		
+		url("../fonts/PFDinTextCondPro-XBlack.otf") format("opentype"),
+		url("../fonts/PFDinTextCondPro-XBlack.woff") format("woff");
+   }
+
+@font-face {
+    font-family: PTSans-Regular;
+	src: url("../fonts/PTSans-Regular.eot");
+	src: url("../fonts/PTSans-Regular.svg") format('svg'),
+		url("../fonts/PTSans-Regular.ttf") format('truetype'),		
+		url("../fonts/PTSans-Regular.otf") format("opentype"),
+		url("../fonts/PTSans-Regular.woff") format("woff");
+   }
+@font-face {
+    font-family: PTSans-Italic;
+	src: url("../fonts/PTSans-Italic.eot");
+	src: url("../fonts/PTSans-Italic.svg") format('svg'),
+		url("../fonts/PTSans-Italic.ttf") format('truetype'),		
+		url("../fonts/PTSans-Italic.otf") format("opentype"),
+		url("../fonts/PTSans-Italic.woff") format("woff");
+   }
+@font-face {
+    font-family: PTSans-Bold;
+	src: url("../fonts/PTSans-Bold.eot");
+	src: url("../fonts/PTSans-Bold.svg") format('svg'),
+		url("../fonts/PTSans-Bold.ttf") format('truetype'),		
+		url("../fonts/PTSans-Bold.otf") format("opentype"),
+		url("../fonts/PTSans-Bold.woff") format("woff");
+   }

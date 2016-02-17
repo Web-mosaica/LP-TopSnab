@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="tobSnab">
+    <head>        
+        <meta name="viewport" content="width=399">        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <title>TopSnab</title>        
+        <meta name="description" content="">        
+        <meta name="keywords" content="">        
+    
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">        
+        <link rel="icon" href="images/favicon.png">
+    
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style-sass.css">
+        <link rel="stylesheet" type="text/css" href="css/media.css">    
+
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>             
+<!--        <script type="text/javascript" src="scripts/jquery.malihu.PageScroll2id.min.js"></script>                 -->
+        <script type="text/javascript" src="scripts/slick.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.js"></script>        
+        <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>        
+        <script type="text/javascript" src="scripts/jquery.viewport.js"></script>        
+        <script type="text/javascript" src="scripts/scripts.js"></script>                
+        
+        <script type="text/javascript" src="scripts/app/angular.min.js"></script>                
+        <script type="text/javascript" src="scripts/app/app.js"></script>                        
+        <script type="text/javascript" src="scripts/app/models.js"></script>                        
+        <script type="text/javascript" src="scripts/app/factories.js"></script>                        
+        <script type="text/javascript" src="scripts/app/constants.js"></script>                        
+        <script type="text/javascript" src="scripts/app/values.js"></script>                        
+        <script type="text/javascript" src="scripts/app/controllers.js"></script>                        
+        <script type="text/javascript" src="scripts/app/directives.js"></script>       
+        <script type="text/javascript" src="scripts/app/codeListFunctions.js"></script>       
+             
+    </head>
+<body>
+    
+    <div class="container-fluid main" data-ng-controller="mainCtrl">
+       
+        
+            <div class="modal fade" id="callForm" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content call-answer">                   
+                    <a href="javascript:void(0)" class="btn-close" data-target="#callForm" ></a>
+                    <div class="block-base-windows overfow-hidden">
+                        <div class="block-before overfow-hidden">                                                                                                   
+                                <div class="title">
+                                    <p>
+                                        <span class="uppercase fontBold btn-block">{{model.window.title.main}}</span>
+                                        {{model.window.title.others}}                                       
+                                    </p>
+                                </div>                               
+                                <form class="call-back-form">
+                                    <ul class="ul-form">
+                                        <li>
+                                            <input type="text" class="people text-empty" required="" id="firstName1" name="firstName1" placeholder="{{model.form.text.firstName}}">
+                                        </li>
+                                        <li>
+                                            <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
+                                        </li>
+                                        <li>
+                                            <input type="submit" value="{{model.form.textButton}}" data-successful class="btn btn-primary uppercase">                                        
+                                        </li>
+                                    </ul>
+                                </form>                        
+                        </div>                        
+                    <div class="thanks">                    
+                        <div class="title">
+                            <p>
+                                <span class="uppercase fontBold btn-block">{{model.window.isSend.main}}</span>
+                                {{model.window.isSend.others}}
+                            </p>
+                        </div>
+                        <p class="description">{{model.window.isSend.description}}</p>
+                    </div>
+                    </div>
+
+                </div>                                                  
+              </div>                              
+            </div>        
+        
+            <div class="modal fade calculatePrice" id="calculatePrice" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content clearfix calculation">                   
+                        <a href="javascript:void(0)" class="btn-close" data-target="#calculatePrice" ></a>
+                        <div class="col-sm-6 clear-padding">
+                            <div class="steps">
+                                <ul>
+                                    <li class="window-choose">
+                                        <i class="ico">1</i>
+                                        <label>{{ model.window.calculation.step[0].title }}</label>
+                                        <div class="images">
+                                            <div class="item">
+                                                <img class="active" type="1" src="" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[0].images[0]}}" />
+                                            </div>
+                                            
+                                            <div class="item">
+                                                <div class="base">
+                                                    <img src="" type="2" class="base-img" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" />
+                                                    <div class="select-box">
+                                                        <img src="" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" />
+                                                        <img src="" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[1]}}" />
+                                                    </div>                                                
+                                                </div>                                                
+                                            </div>
+                                            
+                                            <div class="item">
+                                                <img src="" type='3' data-ng-src="images/calculation/{{model.window.calculation.step[0].list[2].images[0]}}" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item2">
+                                        <i class="ico">2</i>
+                                        <label>{{ model.window.calculation.step[1].title }}</label>
+                                        <div class="base clearfix">
+                                            <div>{{model.window.calculation.step[1].dimensions[0]}} <input type="text" value="" class="win_height" /></div>
+                                            <div>{{model.window.calculation.step[1].dimensions[1]}} <input type="text" value="" class="win_width" /></div>
+                                        </div>
+                                    </li>
+                                    <li class="checkboxes">
+                                        <i class="ico">3</i>
+                                        <label>{{ model.window.calculation.step[2].title }}</label>
+                                        <div class="base">
+                                            <label data-ng-repeat="item in model.window.calculation.step[2].list">
+                                                <i class="icon"></i>
+                                                <input id="check{{$index}}" value="check{{$index}}" type="checkbox" name="check">   {{item}}
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 clear-padding">
+                            <div class="form">
+                                <div class="min-height">
+                                    <img src="" data-ng-src="" class="large" />
+                                </div>
+                                <div class="block-side">
+                                    <div class="div-form">
+                                        <form class="call-back-form" id="stay_blank">
+                                            <ul class="ul-form">
+                                                <li>
+                                                    <input type="text" class="people text-empty" required="" id="firstName1" name="firstName1" placeholder="{{model.form.text.firstName}}">
+                                                </li>
+                                                <li>
+                                                    <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
+                                                </li>
+                                                <li>
+                                                    <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">                                        
+                                                </li>
+                                            </ul>
+                                        </form>      
+                                    </div>
+                                    <div class="successfully"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                                  
+                  </div>                              
+                </div> 
+           
+               <div class="row header">                    
+                   <div class="container relative">    
+                         <i class="arrow-bottom"><a href="" data-to="#whatDoing"></a></i>
+                         <nav class="navbar navbar-inverse navbar-fixed-top">
+                           <div class="topLevel">
+                               <div class="line-bottom"></div>
+                               <div class="container clearfix">
+                                   <div class="col-md-7 clear-padding">
+                                        <a href="index.html" class="navbar-brand">
+                                            <span>{{model.contacts.logotype}}</span>
+                                       </a>
+                                   </div>
+                                   <div class="col-md-5">
+                                        <div class="will-call">
+                                            <i>{{model.contacts.phone}}</i>
+                                           <a href="" class="call">{{model.form.wellCall}}</a>
+                                       </div>    
+                                   </div>              
+                               </div>
+                                <div class="clearfix">                            
+                                  <div id="navbar" class="navbar-collapse collapse">
+                                      <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                              <span class="sr-only">Toggle navigation</span>
+                                              <span class="icon-bar"></span>
+                                              <span class="icon-bar"></span>
+                                              <span class="icon-bar"></span>
+                                            </button>                                            
+                                      </div>
+                                      <ul class="nav navbar-nav">
+                                        <li data-ng-repeat="item in model.menu">
+                                            <a href="" data-ng-href="{{item.link}}" data-to="{{item.link}}">{{item.name}}</a>
+                                        </li>                                                            
+                                      </ul>                                                               
+                                  </div>                                                        
+                                </div>                                               
+                           </div>                   
+                       </nav>
+                       
+                       <div class="col-sm-12 outside100 clear-padding">
+                            <div class="main-view">
+                               <span class="inner-title">{{model.mainView.title.level1}}</span>
+                               <span class="level">{{model.mainView.title.level2}}</span>
+                               <span class="description">{{model.mainView.description}}</span>
+                           </div>
+                            <div class="col-xs-4 pull-right divform">
+                                <div class="call-answer stay-blanket">
+                                    <div class="title">
+                                        <p>
+                                            <span class="uppercase fontBold btn-block">{{model.form.head[0]}}</span>
+                                            <i>{{model.form.head[1]}}</i>
+                                            <span class="uppercase">{{model.form.head[2]}}</span>
+                                        </p>
+                                    </div>                               
+                                    <form class="call-back-form container-fluid" id="stay_blank">
+                                        <ul class="ul-form">
+                                            <li>
+                                                <input type="text" class="people text-empty" required="" id="firstName1" name="firstName1" placeholder="{{model.form.text.firstName}}">
+                                            </li>
+                                            <li>
+                                                <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
+                                            </li>
+                                            <li>
+                                                <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                        
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                           </div>
+                       </div>
+                   </div>                   
+               </div>
+               
+               <div class="row ourServices section" id="ourServices">                                                         
+                    <div class="container">                            
+                        <div class="clearfix">
+                            <div class="btn-block">
+                                <div class="item-col" data-ng-repeat="item in model.services">
+                                    <div class="block-item">
+                                        <div class="base minHeight">                         
+                                            <i class="image-top"></i>
+                                            <i style="background-image:url(images/icons/{{item.image}})" class="image"></i>
+                                            <div class="content"><p>{{item.text}}</p></div>
+                                        </div>
+                                    </div>                    
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+               </div>
+        
+                <section id="whatDoing" class="row whatDoing">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <h1 class="title">{{model.weDoing.title}}</h1>
+                            <div class="base clearfix">
+                                <div class="item item{{$index+1}}" data-ng-repeat="item in model.weDoing.list">
+                                    <i>{{$index+1}}</i><span>{{item}}</span>
+                                </div>
+                            </div>
+                            <div class="block-btn text-center">
+                                <input type="submit" value="{{model.weDoing.button}}" class="btn btn-primary uppercase">    
+                            </div>
+                        </div>
+                    </div>
+                </section>        
+        
+                <section id="solutions" class="row solutions">
+                    <div class="back">
+                        <div class="container back-side">
+                        <h2 class="title yellow">{{model.solutions.title}}</h2>
+                        <div class="clearfix base">
+                            <div class="col-sm-4" data-ng-repeat="item in model.solutions.list">                                
+                                <div class="item item{{$index+1}}">
+                                    <span class="title-small">{{item.title}}</span>
+                                    <i class="image" style="background-image:url('uploads/{{item.image}}')"></i>
+                                     <div class="block-btn text-center">
+                                        <input type="submit" value="{{model.solutions.button}}" data-index="{{$index}}" class="btn btn-default uppercase btnToCalculatePrice">    
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    </div>
+                </section>
+        
+                <section id="catalog" class="row catalog">                    
+                    <div class="container-fluid topBackground">
+                        <div class="row">
+                            <div class="container">
+                                <h3 class="title">{{model.catalog.title}}</h3>                                                            
+                                
+                                <div class="multiple-items">
+                                     <div class="col-sm-4 item{{$index+1}}" data-ng-repeat="item in model.catalog.list">                                
+                                         <div class="item">
+                                            <i class="image"><img src="" data-ng-src="uploads/{{item.image}}" /></i>
+                                            <span class="title-small">{{item.title}}</span>                                            
+
+                                            <p class="description">{{item.description}}</p>
+                                            <i class="price">{{item.price}}</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="block-btn text-center">
+                                    <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section id="stepWork" class="step-work catalogAbout relative row">
+                    <div class="container-fluid back-side">
+                        <div class="row">
+                            <div class="container">
+                                <h4 class="title">{{model.stepWork.title}}</h4>
+                                <div class="base">
+                                    <div class="item item{{$index+1}}" data-ng-repeat="item in model.stepWork.list">                                                                        
+                                        <div class="inner-minHeight relative">
+                                            <i class="image" style="background-image:url('uploads/{{item.image}}')">
+                                                <b class="number">{{$index+1}}</b>
+                                            </i>                                                                             
+                                        </div>
+                                        <p class="description">
+                                            <span class="title-inner">{{item.title}}</span>
+                                            {{item.description}}
+                                        </p>                                
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>                    
+                    </div>
+                </section>
+        
+                <section id="listWorks" class="list-works row">
+                    <div class="container-fluid back-side">
+                        <div class="row">
+                            <div class="container">
+                                <h5 class="title yellow dark">{{model.listWorks.title}}</h5>
+                                
+                                <div bootstrapslider  data-ng-model="listWorks" id="baseBlockForOurWork" data-id="ourWorks" data-show="6" data-show-ol="false"></div>                                
+                            </div>                    
+                        </div>                    
+                    </div>
+                </section>
+        
+                <section id="listOffices" class="list-offices row">                    
+                    <div class="container">
+                        <div class="clearfix">
+                            <div class="col-sm-6">
+                                <h6 class="title yellow">{{model.office.title}}</h6>
+                                <div class="inner-contact">{{model.office.contact}} <b>{{model.contacts.phone}}</b></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="description">
+                                    <div class="base">
+                                        <span class="big">{{model.office.description.main}}</span>
+                                        <span class="small">{{model.office.description.others}}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="call-answer stay-blanket">
+                                    <div class="title">
+                                        <p>
+                                            <span class="uppercase fontBold btn-block">{{model.form.head[0]}}</span>
+                                            <i>{{model.form.head[1]}}</i>
+                                            <span class="uppercase">{{model.form.head[2]}}</span>
+                                        </p>
+                                    </div>                               
+                                    <form class="call-back-form container-fluid">
+                                        <ul class="ul-form">
+                                            <li>
+                                                <input type="text" class="people text-empty" required="" id="firstName2" name="firstName2" placeholder="{{model.form.text.firstName}}">
+                                            </li>
+                                            <li>
+                                                <input type="tel" class="phone text-empty" required="" id="phone2" name="phone2" placeholder="{{model.form.text.phone}}">
+                                            </li>
+                                            <li>
+                                                <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                                                        
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>                                                
+                    </div>                    
+                </section>        
+        
+                <div class="section row block-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9111.254773378005!2d30.210550304192584!3d55.18652862280318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1455533612583" frameborder="0" style="border:0" allowfullscreen></iframe>                    
+                </div>
+        
+        <footer class="row">
+           <div class="container clearfix">
+               <div class="col-sm-4 item clear-padding">
+                    <address>{{model.contacts.signature}}</address>
+               </div>
+               <div class="col-sm-4 share item">
+                    <a href="" class="facebook"></a>
+                    <a href="" class="google"></a>
+                    <a href="" class="vk"></a>
+               </div>
+               <div class="col-sm-4 item  clear-padding">
+                    <div class="will-call">
+                       <i>{{model.contacts.phone}}</i>
+                       <a href="" class="call">{{model.form.wellCall}}</a>
+                   </div>
+               </div>    
+           </div>   
+        </footer>     
+        
+           </div>                         
+</body></html>

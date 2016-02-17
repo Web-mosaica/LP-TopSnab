@@ -1,0 +1,416 @@
+@media (min-width: 768px)
+{
+    .calculatePrice .modal-dialog {
+        width: 820px!important;
+    }
+}
+
+@media (max-width: 1024px)
+{
+    
+    .slick-slide img {        
+        width: 80%;
+        margin: 0 auto;
+    }
+    .catalog .image {
+        min-height: 270px;
+    }
+    
+    .step-work .item1 {
+        top: -58px;
+        left: 64px;
+    }
+    .step-work .item2 {
+        top: -58px;
+        left: 390px;
+    }
+    .ourWorks .carousel-control{ width: 144px;}
+    
+    .ourWorks .carousel-control .glyphicon-chevron-left,
+    .ourWorks .carousel-control .glyphicon-chevron-right,
+    .ourWorks .carousel-control .icon-next, 
+    .ourWorks .carousel-control .icon-prev
+    {
+        top: 41%;
+    }
+ 
+    .ourWorks .carousel-inner {        
+        padding: 0 50px;
+    }
+
+     .step-work .item3 {
+        top: -58px;
+        left: 717px;
+    }
+    .step-work .item4 {
+        top: 291px;
+        left: 235px;
+    }
+    .step-work .item5 {
+    top: 290px;
+    left: 558px;
+}
+    .step-work .inner-minHeight {
+        min-height: 205px;
+    }
+    .step-work {
+        min-height: 990px;
+    }
+    .list-works .container{ padding: 0;}
+    .list-works .base img{ max-width: 100%;}
+    .list-works .base a{ width: 280px;}
+    .carousel-control.right{ right: -73px;}
+    .carousel-control.left{ left: -73px;}
+    
+    .catalog .slick-prev{ left: -25px; }
+    .catalog .slick-next{ right: -25px; }
+    .slick-initialized .slick-slide{ padding: 0;}
+    
+    .step-work .base {
+        background-size: 1760px;
+    }
+
+    
+    .header .will-call{ height: 75px;}   
+    .navbar-collapse{ margin-top: -15px;}
+    .header .will-call{ float: none;}
+    .navbar-brand span {
+        float: none;
+        margin-top: 35px;
+        text-align: left;
+        margin-left: -12px;
+    }
+    
+    .solutions .col-sm-4{
+        width: 50%!important;
+    }
+    
+    .navbar .topLevel {        
+        height: 135px;
+    }
+    .topLevel .container{
+        min-height: 124px;
+    }
+    .whatDoing{
+        background-size: 1500px;
+    }
+    .whatDoing .base .item1 {
+        right: 0;
+        top: -138px;
+        width: 228px;
+    }
+    .whatDoing .base .item2 {
+        left: 0;
+        top: -54px;
+        width: 175px;
+    }
+    .whatDoing .base .item3 {
+        right: 0;
+        top: 138px;
+        width: 146px;
+        text-align: right;
+    }
+    .whatDoing .base .item4 {
+        left: 0;
+        top: 180px;
+        width: 122px;
+    }
+    .whatDoing .base .item4 span {
+        padding-top: 30px;
+        display: block;
+        margin-top: 38px;
+        text-align: right;
+        margin-left: 0;
+        margin-right: -100px;
+        text-align: left;
+    }
+    .whatDoing .base {
+        min-height: 370px;
+    }
+    .whatDoing {
+        min-height: 650px;
+    }
+    .solutions .item {
+        min-width: 50%;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .whatDoing {
+        min-height: 735px;
+    }
+    .whatDoing .base{ min-height: 0; margin-bottom: 15px;}
+    .whatDoing .base .item {
+        position: relative;
+        right: inherit;
+        top: inherit;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        left: inherit;
+    }
+    .whatDoing .base .item i {
+        float: left!important;
+        margin-right: 10px;
+        background-position: right bottom!important;
+    }
+    .whatDoing .base .item span
+    {
+        max-width: 100%!important;
+        text-align: left;
+    }
+    
+    .whatDoing {
+        background: url("../images/back-home.jpg") no-repeat center top;
+        background-size: 900px;
+        background-position: center top;
+    }
+    
+    .solutions .col-sm-4 {
+        width: 100%!important;
+    }
+    
+    .step-work .base {
+        margin: 80px 20px 0 20px;
+        background: none;
+    }
+    .step-work .inner-minHeight {
+        min-height: 205px;
+    }
+    .step-work p{ max-width: 100%; margin-bottom: 20px;}
+    
+    .step-work .item1 {
+        top: 0;
+        left: 20px;
+    }
+    .step-work .item {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        left: inherit;
+    }
+    
+    .main-view {
+        max-width: 400px!important;
+    }
+    .main-view .inner-title {
+        color: #333333;
+        font-size: 39px;
+        font-family: GothamPro-Black;
+        line-height: 39px;
+        margin-top: 78px;
+    }
+    .main-view .level {
+        font-size: 20px;
+    }
+    
+    .main-view .description {
+        font-size: 15px;
+        color: white;
+        font-family: GothamProRegular;
+        margin-top: 103px;
+        padding-right: 63px;
+        text-align: right;
+    }
+    .divform{
+        width: auto;
+        float: none!important;
+        right: 0;
+        padding: 0!important;
+    }
+    
+    .call-answer {
+        width: 290px;
+        float: right;
+    }
+    .call-answer .ul-form{
+        padding: 0;
+    }
+    .ourServices .item-col {
+        width: 22%;
+        float: left;
+        min-width: 160px;
+        min-height: 250px;
+    }
+    
+    .solutions .base .title-small {
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .solutions .image {
+        height: 300px;
+    }
+    .solutions .item{ margin-bottom: 20px;}
+    
+    .list-offices .inner-contact{
+        background: #00bff3;
+        height: auto;
+        padding: 10px;
+    }
+    .list-offices .description .base{ padding-top: 0;}
+    footer .will-call{ float: none;}
+    .title{ margin-top: 10px;}
+    .inner-contact{ margin-top: 0;}
+    .list-offices .description{ float: none;}
+    .list-offices .container{ padding: 0;}
+    .block-map iframe{ margin-top: 0;}
+    .list-offices .call-answer {
+        position: absolute;
+        right: 10%;
+        top: 220px;
+    }
+    
+    /*slider*/
+    .list-works .base{
+        width: 296px;
+        margin: 0 auto;        
+        margin-bottom: 15px;
+    }
+    .carousel-control.left{ left: -25px;}
+    .carousel-control.right{ right: -25px;}
+    
+    .list-works .base a {        
+        text-align: center;
+    }
+    .ourWorks .col{ width: 100%;}
+    .list-works .base{ float: none;}
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {    
+        top: 39%;
+    }
+    footer address {
+        display: block;
+        text-align: center;
+    }
+    footer .will-call { 
+        margin-right: 28%;
+    }
+    footer address {
+        line-height: 20px;
+    }
+    .share {
+        padding-top: 0;
+    }
+    /*slider=========*/
+}
+
+
+
+@media (max-width: 768px){
+    .topLevel .container{
+        padding: 0;
+    }
+    .header .will-call {
+        position: relative;
+        right: inherit;
+        top: inherit;
+        text-align: right;
+        margin-top: 115px;
+    }
+    .navbar .topLevel {
+        min-height: 135px;
+        height: auto;
+    }
+    .header .will-call {
+        float: right;
+    }
+    .header .will-call {
+        margin-top: 40px;
+    }
+    .collapse{ display: block;}
+    .navbar-inverse .navbar-nav>li{ width: 100%;}
+    .navbar-collapse{ padding: 0;}
+    .navbar-collapse ul.nav{ height: 0; overflow: hidden;}
+    .navbar-collapse.in ul.nav{ height: auto;}
+    .navbar-header{ background: #00bff3;}
+    .navbar-inverse ul.nav.navbar-nav{ margin-top: 0;}
+    .title{ 
+        background: none;
+        line-height: 35px;
+        padding: 0;
+        height: auto;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .container-fluid{
+        padding:0 5px;
+    }
+    footer .item {
+        min-height: 50px;             
+    }
+    footer .will-call {
+        margin: 0;
+    }
+    footer .will-call i{ width: 100%;}
+    footer{ padding: 0 10px;}
+    
+    .list-offices .call-answer {
+        top: 280px;
+    }
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .icon-prev
+    {
+        left: 51px;
+    }
+    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
+        right: 51px;
+    }
+    
+    .step-work .container{ padding: 0 25px;}
+    .step-work p{
+        margin: 0 0 20px 0;
+    }
+    .catalog .multiple-items {
+        margin-bottom: 10px;
+    }
+    
+    .slick-slide img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .catalog .description {
+        padding: 0 25px;
+    }
+    .catalog .slick-next {
+        right: 7px;
+    }
+    .catalog .slick-prev {
+        left: 7px;
+    }
+    .slick-dots{ bottom: 0;}
+    .catalog .multiple-items{
+        margin-bottom: 40px;
+    }
+    .slick-dots {
+        bottom: -45px;
+        z-index: 50;
+    }
+    .ourServices .item-col{ width: 50%;}
+    .whatDoing{ min-height: auto; margin-bottom: 15px;}
+    .whatDoing .base{ padding-top: 250px;}
+    .whatDoing .base .item { height: 65px;}
+    .whatDoing .base .item span{ margin: 5px!important; padding: 0 }
+    .line-bottom{ display: none;}
+    
+    .main-view {        
+        margin-top: 35px;
+        background-position: center;
+    }
+    .main-view .inner-title {
+        margin-top: 108px;
+    }
+    .main-view .level {
+        margin-top: 15px;
+    }
+    .main-view .description {
+        margin-top: 100px;
+    }
+    .call-answer {
+        margin-right: 11%;
+    }
+    .step-work .base{ margin-right: 0; margin-top: 40px;}
+}

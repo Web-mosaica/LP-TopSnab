@@ -13,7 +13,7 @@
         <link rel="icon" href="images/favicon.png">
     
         <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" type="text/css" href="css/slick.css">
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="css/media.css">    
 
         <script type="text/javascript" src="scripts/jquery.min.js"></script>             
+        <script type="text/javascript" src="bower_components/fancybox/jquery.fancybox.pack.js"></script>             
 <!--        <script type="text/javascript" src="scripts/jquery.malihu.PageScroll2id.min.js"></script>                 -->
         <script type="text/javascript" src="scripts/slick.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
@@ -345,8 +346,7 @@
                     <div class="container-fluid back-side">
                         <div class="row">
                             <div class="container">
-                                <h5 class="title yellow dark">{{model.listWorks.title}}</h5>
-                                
+                                <h5 class="title yellow dark">{{model.listWorks.title}}</h5>                                
                                 <div bootstrapslider  data-ng-model="listWorks" id="baseBlockForOurWork" data-id="ourWorks" data-show="6" data-show-ol="false"></div>                                
                             </div>                    
                         </div>                    

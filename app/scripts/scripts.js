@@ -192,13 +192,13 @@ var Site = new function () {
     this.OnLoad = function(){
 //        $(".example-image").fancybox();
         
-//        $("a").fancybox({
-//            'transitionIn'	:	'elastic',
-//            'transitionOut'	:	'elastic',
-//            'speedIn'		:	600, 
-//            'speedOut'		:	200, 
-//            'overlayShow'	:	false
-//        });
+        $(".list-works .base a").fancybox({
+            'transitionIn'	:	'elastic',
+            'transitionOut'	:	'elastic',
+            'speedIn'		:	600, 
+            'speedOut'		:	200, 
+            'overlayShow'	:	false
+        });
         
         this.windowChoose();
         
@@ -212,7 +212,7 @@ var Site = new function () {
         
         
             $('.multiple-items').slick({
-              infinite: false,
+              infinite: true,
               dots: true,
               slidesToShow: ($("body").width()>768) ? 3 : 1,
               slidesToScroll: ($("body").width()>768) ? 3 : 1,

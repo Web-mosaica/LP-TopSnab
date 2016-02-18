@@ -414,3 +414,40 @@
     }
     .step-work .base{ margin-right: 0; margin-top: 40px;}
 }
+
+@media (max-width: 500px)
+{
+    .calculatePrice .modal-dialog{ display: block;}
+    .steps ul{ padding: 0 0 0 15px;}
+    .steps li {
+        margin-bottom: 15px;
+    }   
+    .steps li label{ margin-bottom: 5px;}
+    .calculation{ 
+        background: white;
+        padding: 25px 0;
+    }
+    .calculation .btn-close {
+        right: 5px;
+        top: 5px;
+        z-index: 5;
+    }
+    .calculation .min-height {
+        min-height: 270px;
+        padding-top: 0;
+    }
+    .navbar-brand{ margin-left: 15px;}
+    .will-call{ margin: 0;}
+    
+    .header .will-call {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+        margin-top: 20px;
+    }
+    .topLevel .container {
+        min-height: 140px;
+    }
+    .modal.in .modal-dialog{ padding-top: 30%;}
+ 

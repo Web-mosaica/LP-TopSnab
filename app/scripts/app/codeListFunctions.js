@@ -35,8 +35,8 @@ var app = new function(){
                 var p = angular.element('<p></p>').addClass("description").html(row.description);
                 var space = angular.element('<div></div>').addClass("space");
                 var div = angular.element('<div></div>').addClass("col").append(angular.element('<div></div>'));
-                a.append(image);
-                div.find("div").addClass("base").append(a).append(p).append(space);                                   
+                a.append(image).append(space);
+                div.find("div").addClass("base").append(a).append(p);
                 
                 currentGroup++;
                 if (currentGroup == group.show)

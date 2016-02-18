@@ -112,7 +112,7 @@ body > .container-fluid.main{
 
 .header .will-call{
     position: absolute;
-    right: 15px;
+    right: 0;
     top: 0;
     text-align: right;
 }
@@ -317,11 +317,18 @@ body > .container-fluid.main{
     font-family: GothamPro-Bold;
     border-radius:0!important;      
     color: white;
-}
+    transform:translateY(0);
+    transition: transform 0.5s ease;
+};
+
 .btn.btn-primary:focus,
 .btn.btn-primary:hover{
-    background-position: left bottom;            
+    background-color: transparent!important;
+    background-position: left bottom!important;            
     color: white;  
+}
+.btn.btn-primary:hover{
+    transform:translateY(2px);    
 }
 
 .btn.btn-default{
@@ -336,13 +343,18 @@ body > .container-fluid.main{
     font-family: GothamPro-Bold;
     border-radius:0!important;      
     color: #6d6d6d;
+    transform:translateY(0);
+    transition: transform 0.5s ease;
 }
 
 .btn.btn-default.active,
-.btn.btn-default:focus,
 .btn.btn-default:hover{
     background-position: left top;            
     color: white;  
+    transform:translateY(2px);    
+}
+.btn.btn-default:focus{
+    background-color: transparent!important;
 }
 
 /*ourServices*/
@@ -384,9 +396,10 @@ body > .container-fluid.main{
     background-color: #dff4fc;
     border-radius: 100%;
     border:10px solid white; 
+    transition: 1s ease;
 }
 .ourServices .block-item:hover .image{
-    border:0px solid white; 
+    border:0px solid white;     
 }
 
 .ourServices .base{
@@ -449,13 +462,14 @@ body > .container-fluid.main{
     padding-top: 10px;
     font-style: normal;
     padding-right: 7px;
-    text-align: right;
+    text-align: right;    
 }
 .whatDoing .base .item span{
     display: block;
+    transition: 1s ease;
 }
 .whatDoing .base .item i.right{
-    background-position: right bottom;
+    background-position: right bottom;    
 }
 .whatDoing .base .item1{
     right: 0;
@@ -713,8 +727,10 @@ body > .container-fluid.main{
 .list-works .base{
     position: relative;
     float: left;
+    overflow: hidden;
     margin-bottom: 25px;
     height: auto;
+    border: 2px solid #6dcff6;
 }
 .list-works .base a{
     width: 296px;
@@ -726,7 +742,6 @@ body > .container-fluid.main{
 .list-works .base img{
     max-width: 296px;
     max-height: 196px;        
-    border: 2px solid #6dcff6;
 }
 .list-works .base p.description{
     display: block;
@@ -751,7 +766,7 @@ body > .container-fluid.main{
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/loop.png") no-repeat center;
+    background: url("../images/loop.png") no-repeat center 30px;
     z-index: 15;
 }
 .list-works .base:hover p.description{
@@ -1348,7 +1363,7 @@ footer address{
 .calculation .ul-form{ width: 260px; margin: 0 auto; padding: 0;}
 .calculation .ul-form li{ padding-bottom: 0;}
 
-.text-empty::-webkit-input-placeholder
+.calculatePrice .text-empty::-webkit-input-placeholder
 {
     color: #333;
 }
@@ -1415,4 +1430,10 @@ footer address{
 
 .navbar-collapse.in .nav{
     background: #00bff3;
+}
+
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: 0px 0px 10px 0px #fff;
+    -moz-box-shadow: 0px 0px 10px 0px #fff;
+    box-shadow: 0px 0px 10px 0px #fff;
 }

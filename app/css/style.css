@@ -70,7 +70,7 @@ body > .container-fluid.main{
 .navbar-brand{  
     float: left;
     margin-top: 24px;
-    margin-left: 30px;
+    margin-left: 5px;
     max-width: 520px;
     width: 100%;
     z-index: 5;
@@ -122,7 +122,7 @@ body > .container-fluid.main{
 
 .will-call{
     float: right;
-    margin-right: 30px;
+    margin-right: 5px;
     margin-top: 25px;
     text-align: right;
     position: relative;
@@ -308,9 +308,16 @@ body > .container-fluid.main{
     background: url("../images/text-empty.png") no-repeat right bottom;
 }
 
-.btn.btn-primary{
-    background:url("../images/btn.png") no-repeat;
-    background-position: left top;
+/*
+.ul-form input.button{    
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #feaa33),color-stop(100%, #ff9001));
+    background-image: -moz-linear-gradient(top, #feaa33,#ff9001);
+    background-image: -webkit-linear-gradient(top, #feaa33,#ff9001);
+    background-image: linear-gradient(to bottom right, #feaa33,#ff9001);
+    border-color: #feaa33;
+    box-shadow: 0 3px 0 #a76021;
+    
     width: 260px;
     padding: 0;
     border: none;
@@ -318,40 +325,34 @@ body > .container-fluid.main{
     height: 48px;
     font-size: 16px;
     font-family: GothamPro-Bold;
-    border-radius:0!important;      
+    border-radius: 0!important;
     color: white;
-    text-align: center;
 };
+*/
 
-.btn-primary:hover{
-    background: red!important;
-}
-
-a.btn.btn-primary:hover,
-input.btn.btn-primary:hover{
-    background-color: transparent!important;
-    background-position: left bottom!important;            
-    color: white;  
-}
-
-.btn.btn-primary:focus{
-    background-color: transparent!important;
-    background-position: left top!important;            
-    color: white;  
-}
-.btn.btn-primary:active{
+.btn.btn-primary:hover {    
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffa800),color-stop(100%, #e59a0a));
+    background-image: -moz-linear-gradient(top, #ffa800,#e59a0a);
+    background-image: -webkit-linear-gradient(top, #ffa800,#e59a0a);
+    background-image: linear-gradient(to bottom right, #ffa800,#e59a0a);
     border-color: transparent;
-    background-color: transparent;
-    background-image: url("../images/btn-blick.png");
-    background-repeat: no-repeat;    
-    background-position: center;
-    background-size: 255px;
-    box-shadow: none;
+    box-shadow: 0 3px 0 #d38c02;
+}
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+.btn.btn-primary:active {
+    top: 3px;
+    padding: 0;
+    box-shadow: 0 0 0 #809e1e;
 }
 
-.btn.btn-default{
-    background:url("../images/btn.png") no-repeat;
-    background-position: left -48px;
+
+.btn.btn-primary {
     width: 260px;
     padding: 0;
     border: none;
@@ -359,30 +360,103 @@ input.btn.btn-primary:hover{
     height: 48px;
     font-size: 16px;
     font-family: GothamPro-Bold;
-    border-radius:0!important;      
-    color: #6d6d6d;
-    transform:translateY(0);
-    transition: transform 0.5s ease;
+    border-radius: 0!important;
+    color: white;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffc24b),color-stop(100%, #ffa800));
+    background-image: -moz-linear-gradient(top, #ffc24b,#ffa800);
+    background-image: -webkit-linear-gradient(top, #ffc24b,#ffa800);
+    background-image: linear-gradient(to bottom right, #ffc24b,#ffa800);
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 0;
+    border: none;
+    box-shadow: 0 3px 0 #d38c02;
+    text-align: center;
+    color: #fff !important;
 }
 
-.btn.btn-default.active,
-.btn.btn-default:hover{
-    background-position: left top;            
-    color: white;  
-    transform:translateY(2px);    
+.btnToCalculatePrice.active.btn-default.btn,
+a.btn.btn-primary:hover,
+a.btn.btn-primary:focus,
+a.btn.btn-primary:active,
+a.btn.btn-primary:hover,
+.ul-form input.btn.btn-primary:focus,
+.ul-form input.btn.btn-primary:active,
+.ul-form input.btn.btn-primary:hover{
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffc36c),color-stop(100%, #feaa32));
+    background-image: -moz-linear-gradient(top, #ffc36c,#feaa32);
+    background-image: -webkit-linear-gradient(top, #ffc36c,#feaa32);
+    background-image: linear-gradient(to bottom right, #ffc36c,#feaa32);
+    border-color:transparent;
+    box-shadow: 0 3px 0 #cb772d;
 }
-.btn.btn-default:focus{
-    background-color: transparent!important;
-}
+.btnToCalculatePrice.active.btn-default.btn{ color: white;}
 
-.btn.btn-default:active{
+.btn.btn-default:hover {    
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffa800),color-stop(100%, #e59a0a));
+    background-image: -moz-linear-gradient(top, #ffa800,#e59a0a);
+    background-image: -webkit-linear-gradient(top, #ffa800,#e59a0a);
+    background-image: linear-gradient(to bottom right, #ffa800,#e59a0a);
     border-color: transparent;
-    background-color: transparent;
-    background-image: url("../images/btn-gray.png");
-    background-repeat: no-repeat;    
-    background-position: center;
-    background-size: 255px;
-    box-shadow: none;
+    box-shadow: 0 3px 0 #d38c02;
+    color: white!important;
+}
+.btn.btn-default:active,
+.btn.btn-default:focus {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+.btn.btn-default:active {
+    top: 3px;
+    padding: 0;
+    box-shadow: 0 0 0 #809e1e!important;
+}
+
+.btn.btn-default {
+    width: 260px;
+    padding: 0;
+    border: none;
+    line-height: 48px;
+    height: 48px;
+    font-size: 16px;
+    font-family: GothamPro-Bold;
+    border-radius: 0!important;
+    color: #6d6d6d;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #efefef),color-stop(100%, #bfbfbf));
+    background-image: -moz-linear-gradient(top, #efefef,#bfbfbf);
+    background-image: -webkit-linear-gradient(top, #efefef,#bfbfbf);
+    background-image: linear-gradient(to bottom right, #efefef,#bfbfbf);
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
+    top: 0;
+    border: none;
+    box-shadow: 0 3px 0 #899393;
+    text-align: center;
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active,
+.btn.btn-default:hover{
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ffc36c),color-stop(100%, #feaa32));
+    background-image: -moz-linear-gradient(top, #ffc36c,#feaa32);
+    background-image: -webkit-linear-gradient(top, #ffc36c,#feaa32);
+    background-image: linear-gradient(to bottom right, #ffc36c,#feaa32);
+    border-color: #ffc36c;
+    color: #6d6d6d;
+    box-shadow: 0 3px 0 #cb772d;
 }
 
 /*ourServices*/
@@ -507,7 +581,7 @@ input.btn.btn-primary:hover{
 .whatDoing .base .item1{
     right: 0;
     top: -103px;
-    width: 404px; 
+    width: 315px; 
 }
 .whatDoing .base .item1 i{ margin-right: 19px;
     background-position: right bottom;
@@ -523,7 +597,7 @@ input.btn.btn-primary:hover{
 .whatDoing .base .item2{
     left: 40px;
     top: 5px;
-    width: 296px;
+    width: 204px;
 }
 .whatDoing .base .item2 i{ 
     float: right;
@@ -541,9 +615,9 @@ input.btn.btn-primary:hover{
 }
 
 .whatDoing .base .item3{
-    right: 87px;
-    top: 243px;
-    width: 200px;
+   right: 45px;
+    top: 236px;
+    width: 190px;
     text-align: right;
 }
 .whatDoing .base .item3 i{ 
@@ -562,7 +636,7 @@ input.btn.btn-primary:hover{
 .whatDoing .base .item4{
     left: 0;
     top: 243px;
-    width: 268px;
+    width: 177px;
 }
 .whatDoing .base .item4 i{ 
     float: right;
@@ -590,6 +664,7 @@ input.btn.btn-primary:hover{
     font-family: GothamPro-Black;
     line-height: 114px;
     padding-left: 44px;
+    margin-left: 15px;
     margin-top: 70px;
     z-index: 5;
     position: relative;
@@ -645,17 +720,33 @@ input.btn.btn-primary:hover{
     min-height: 1056px;
     background: url("../images/back-section1.png") no-repeat center top;
 }
+.step-work .background:before{
+    position: absolute;
+    left: 0;
+    top: 305px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 500px;
+    z-index: 20;
+    background: url("../images/space-block-arrow.png") no-repeat center;
+}
+.step-work .background .container{
+    position: relative;
+    z-index: 25;
+}
 .step-work .base{
     position: relative;
     margin-top: 138px;
-    min-height: 437px;
-    background: url("../images/space-block-arrow.png") no-repeat center top;
+    min-height: 437px;    
 }
 .step-work .base .title-small{
     margin: 0 auto;
     margin-top: 45px;
     margin-bottom: 55px;
 }
+
+
 .step-work .item{
     min-width: 304px;
     display: block;
@@ -737,23 +828,23 @@ input.btn.btn-primary:hover{
 }
 .step-work .item1{
     top: -56px;
-    left: 148px;
+    left: 56px;
 }
 .step-work .item2{    
     top: -56px;
-    left: 493px;
+    left: 400px;
 }
 .step-work .item3{ 
     top: -56px;
-    left: 839px;
+    left: 746px;
 }
 .step-work .item4{ 
     top: 319px;
-    left: 326px;
+    left: 233px;
 }
 .step-work .item5{
     top: 318px;
-    left: 667px;
+    left: 573px;
 }
 /*solutions===========*/
 
@@ -808,7 +899,10 @@ input.btn.btn-primary:hover{
 }
 .list-works .space{ display: none;}
 
-.ourWorks{ margin-top: 50px;}
+.ourWorks{
+    margin-top: 50px;
+    margin-left: 5px;
+}
 
 .dark{ color: #333!important;}
 
@@ -850,17 +944,28 @@ input.btn.btn-primary:hover{
 }
 
 .carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev{ left: 0;}
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next{ right: 0;}
+
+.carousel-control .glyphicon-chevron-left,
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-right,
 .carousel-control .icon-next
 {
     margin: 0;
 }
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
+    top: 40%;
+}
+
 .ourWorks .group{
     max-width: 940px;
     margin: 0 auto;
     width: 100%;
     min-height: 250px;
+    overflow: hidden;
 }
 .ourWorks .col{ 
     width: 33.33333333%;
@@ -869,6 +974,7 @@ input.btn.btn-primary:hover{
     position: relative;
     min-height: 1px;
 }
+
 
 /*list-offices*/
 .list-offices{
@@ -1083,12 +1189,17 @@ input.btn.btn-primary:hover{
     line-height: 24px;
     padding-top: 10px;
     margin-top: 43px;
+    position: absolute;
+    display: block;
+    left: -25px;
+    bottom: -75px;
+    width: 100%;
 }
 .inner-contact b{ display: block;}
 
 .block-map iframe{
     height: 450px;
-    margin-top: -48px;
+    margin-top: 0;
     width: 100%!important;
     pointer-events: none;
 }
@@ -1295,7 +1406,7 @@ footer address{
     padding-left: 12px;
     font-size: 18px;
     font-family: GothamPro-Light;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     border: none;
 }
 
@@ -1510,3 +1621,12 @@ footer address{
 .navbar-inverse .navbar-toggle { border-color: white; border-width: 2px; }
 
 .whatDoing .block-btn{ margin-bottom: 15px;}
+
+.pull-right.divform{ margin-right: 24px;}
+
+.item-address{ padding: 0;}
+
+.div-form .btn.btn-primary{
+    margin: 0 auto;
+    display: block;
+}

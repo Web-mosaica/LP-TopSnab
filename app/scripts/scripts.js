@@ -134,6 +134,10 @@ var Site = new function () {
 			}
 		})
 	});
+        
+        $(".download").bind("click", function(e){            
+             window.location.href = $(this).data("link");
+        });
     
         $(".call").bind("click", function(e){
               e.preventDefault();
@@ -203,6 +207,7 @@ var Site = new function () {
     this.OnLoad = function(){
         this.windowChoose();
         
+        
         $(".list-works .base a").fancybox({
             'transitionIn'	:	'elastic',
             'transitionOut'	:	'elastic',
@@ -262,7 +267,7 @@ var Site = new function () {
             var t = $(this).addClass(a);
             var id =  $('#calculatePrice').modal({show:"true"}); 
             
-            var item = id.find(".images .item").eq(t.data("index")).addClass(a);             
+            var item = id.find(".images .item").removeClass(a).eq(t.data("index")).addClass(a);             
             var source = item.find("img").first().attr("src");
             source = source.substring(source.lastIndexOf("/")+1);
             id.find(".large").attr("src", "uploads/"+source);                        

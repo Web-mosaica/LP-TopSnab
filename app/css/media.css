@@ -1,3 +1,10 @@
+@media (min-width: 1200px)
+{
+    .container {
+        width: 980px;
+    }
+}
+
 @media (min-width: 768px)
 {
     .calculatePrice .modal-dialog {
@@ -140,6 +147,8 @@
 
 @media (max-width: 768px)
 {
+    
+    .step-work .background:before{ display: none;}
     
     .whatDoing .base .item1 {
         right: 0;
@@ -662,4 +671,14 @@
     .step-work .base{ margin-left: 0; margin-right: 0;}
     .step-work .container{ padding: 0;}
     .catalog .block-btn{ margin-bottom: 25px;     margin-top: 60px;}
+    
+    body > .container-fluid.main{ background-position: left top;}
+    
+    .inner-contact {
+        max-width: 100%;
+        margin-top: 43px;
+        left: 0;
+        bottom: -77px;
+        width: 100%;
+    }
 }

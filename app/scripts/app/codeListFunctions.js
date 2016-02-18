@@ -64,8 +64,8 @@ var app = new function(){
             var btnRight =  angular.element('<div></div>').addClass("right carousel-control").attr("data-slide","next").attr("href","index.html#"+element.data("id"));
             btnRight.append(angular.element('<div></div>').addClass("icon-next"));
             
-            divBase.append(btnLeft).append(btnRight);
-            newElement.append(ol).append(divBase);                    
+            //divBase.append(btnLeft).append(btnRight);
+            newElement.append(ol).append(divBase).append(btnLeft).append(btnRight);                   
             element.append(newElement);
             
             

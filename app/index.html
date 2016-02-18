@@ -66,10 +66,8 @@
                                         <li>
                                             <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
                                         </li>
-                                        <li>
-                                            <input type="submit" value="{{model.form.textButton}}" data-successful class="btn btn-primary uppercase">                                        
-                                        </li>
                                     </ul>
+                                    <input type="submit" value="{{model.form.textButton}}" data-successful class="btn btn-primary uppercase">
                                 </form>                        
                         </div>                        
                     <div class="thanks">                    
@@ -153,11 +151,8 @@
                                                 <li>
                                                     <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
                                                 </li>
-                                                <li>
-                                                    <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">        
-                                                </li>
                                             </ul>
-                                            
+                                            <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">                                                    
                                         </form>      
                                     </div>
                                     <div class="successfully"></div>
@@ -170,7 +165,7 @@
            
                <div class="row header">                    
                    <div class="container relative">    
-                         <i class="arrow-bottom"><a href="" data-to="#whatDoing"></a></i>
+                         <i class="arrow-bottom"><a href="#whatDoing" rel='m_PageScroll2id' ></a></i>
                          <nav class="navbar navbar-inverse navbar-fixed-top">
                            <div class="topLevel">
                                <div class="line-bottom"></div>
@@ -229,11 +224,9 @@
                                             </li>
                                             <li>
                                                 <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
-                                            </li>
-                                            <li>
-                                                <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                        
-                                            </li>
+                                            </li>                                            
                                         </ul>
+                                        <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                               
                                     </form>
                                 </div>
                            </div>
@@ -269,7 +262,7 @@
                                 </div>
                             </div>
                             <div class="block-btn text-center">
-                                <input type="submit" value="{{model.weDoing.button}}" class="btn btn-primary uppercase">    
+                                <input type="submit" value="{{model.weDoing.button}}" class="btn btn-primary uppercase call">    
                             </div>
                         </div>
                     </div>
@@ -313,7 +306,8 @@
                                 </div>
                                 
                                 <div class="block-btn text-center">
-                                    <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>
+<!--                                    <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>-->
+                                    <input type="submit" data-link="{{model.catalog.download}}" value="{{model.catalog.button}}" class="btn btn-primary uppercase download">                                                                        
                                 </div>
                             </div>
                         </div>
@@ -322,7 +316,7 @@
         
                 <section id="stepWork" class="step-work catalogAbout relative row">
                     <div class="container-fluid back-side">
-                        <div class="row">
+                        <div class="row background">
                             <div class="container">
                                 <h4 class="title">{{model.stepWork.title}}</h4>
                                 <div class="base">
@@ -356,10 +350,10 @@
         
                 <section id="listOffices" class="list-offices row">                    
                     <div class="container">
-                        <div class="clearfix">
+                        <div class="clearfix relative">
+                            <div class="inner-contact">{{model.office.contact}} <b>{{model.contacts.phone}}</b></div>
                             <div class="col-sm-6 item-address">
-                                <h6 class="title yellow">{{model.office.title}}</h6>
-                                <div class="inner-contact">{{model.office.contact}} <b>{{model.contacts.phone}}</b></div>
+                                <h6 class="title yellow">{{model.office.title}}</h6>                                
                             </div>
                             <div class="col-sm-6">
                                 <div class="description">
@@ -385,10 +379,8 @@
                                             <li>
                                                 <input type="tel" class="phone text-empty" required="" id="phone2" name="phone2" placeholder="{{model.form.text.phone}}">
                                             </li>
-                                            <li>
-                                                <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                                                        
-                                            </li>
                                         </ul>
+                                        <input type="submit" value="{{model.form.textButton}}" class="btn btn-primary uppercase">                                                                        
                                     </form>
                                 </div>
                                 

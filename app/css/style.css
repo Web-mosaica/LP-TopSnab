@@ -55,7 +55,9 @@ div{ margin: 0 auto;}
 
 body > .container-fluid.main{
     min-height: 100%;    
-    background:URL("../images/back-top.jpg") no-repeat center top; 
+    background-image:url("../images/back-top.jpg"); 
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 .fontBold{

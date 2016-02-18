@@ -22,7 +22,7 @@
 
         <script type="text/javascript" src="scripts/jquery.min.js"></script>             
         <script type="text/javascript" src="bower_components/fancybox/jquery.fancybox.pack.js"></script>             
-<!--        <script type="text/javascript" src="scripts/jquery.malihu.PageScroll2id.min.js"></script>                 -->
+        <script type="text/javascript" src="scripts/jquery.malihu.PageScroll2id.min.js"></script>                 
         <script type="text/javascript" src="scripts/slick.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="scripts/bootstrap.js"></script>        
@@ -154,9 +154,10 @@
                                                     <input type="tel" class="phone text-empty" required="" id="phone1" name="phone1" placeholder="{{model.form.text.phone}}">
                                                 </li>
                                                 <li>
-                                                    <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">                                        
+                                                    <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">        
                                                 </li>
                                             </ul>
+                                            
                                         </form>      
                                     </div>
                                     <div class="successfully"></div>
@@ -198,7 +199,7 @@
                                       </div>
                                       <ul class="nav navbar-nav">
                                         <li data-ng-repeat="item in model.menu">
-                                            <a href="" data-ng-href="{{item.link}}" data-to="{{item.link}}">{{item.name}}</a>
+                                            <a href="" rel='m_PageScroll2id' data-ng-href="{{item.link}}" data-to="{{item.link}}">{{item.name}}</a>
                                         </li>                                                            
                                       </ul>                                                               
                                   </div>                                                        
@@ -356,7 +357,7 @@
                 <section id="listOffices" class="list-offices row">                    
                     <div class="container">
                         <div class="clearfix">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 item-address">
                                 <h6 class="title yellow">{{model.office.title}}</h6>
                                 <div class="inner-contact">{{model.office.contact}} <b>{{model.contacts.phone}}</b></div>
                             </div>

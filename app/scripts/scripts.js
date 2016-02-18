@@ -1,4 +1,3 @@
-
 $(function(){
     
     Browser.Init();
@@ -177,20 +176,32 @@ var Site = new function () {
     };
     this.scroll = function (scroll) {
         
-        var position = parseInt($("body").height())+scroll;                
-        
-        $("nav li a").each(function(){
-            var t = $(this);
-            var a = "active";
-            var obj = $(t.attr("href")).offset().top;
-            if (position > obj && (obj+$(t.attr("href")).height()) > position)
-                {
-                    t.addClass(a);
-                } else t.removeClass(a);        
-        });        
+        var header = $(".header");
+        var clazz = "fixit";
+        if (scroll>0)
+            {
+                if ((Browser.isIPhone() || Browser.isAndroid())&&( !header.hasClass(clazz))){
+                    header.addClass(clazz);
+                    $(".will-call i").addClass("call");
+                    header.find(".navbar-header").append($(".will-call").html());
+                    
+                    $(".call").bind("click", function(e){
+                        e.preventDefault();
+                        var t = $(this);
+                        var id =  $('#callForm');
+                        id.find(".call-answer").removeClass("small-window");            
+                        id.find(".block-before").attr("style","");
+                        id.modal({show:"true"}); 
+                    });    
+                } 
+            }
+            else
+                    {
+                        header.removeClass(clazz).find(".navbar-header .call").remove();
+                    }
     };
     this.OnLoad = function(){
-//        $(".example-image").fancybox();
+        this.windowChoose();
         
         $(".list-works .base a").fancybox({
             'transitionIn'	:	'elastic',
@@ -200,11 +211,21 @@ var Site = new function () {
             'overlayShow'	:	false
         });
         
-        this.windowChoose();
+        $(".navbar-toggle").bind("click", function(e){
+           e.preventDefault();
+            var obj = $("#navbar");
+            var visible = ["50px", "166px"];
+            if (!obj.hasClass("in"))
+                {
+                    obj.addClass("collapse in").animate({height:visible[1]},500);
+                } else obj.animate({height:visible[0]},500, function(){ $(this).removeClass("in")});
+            
+            return false;
+        });                
         
-//        $("a[rel='m_PageScroll2id']").mPageScroll2id({
-//            layout:"auto"
-//        });
+        $("a[rel='m_PageScroll2id']").mPageScroll2id({
+            layout:"auto"
+        });
       
         $('.block-map').click(function () {
             $(this).find('iframe').css("pointer-events", "auto");
@@ -270,7 +291,11 @@ var Site = new function () {
         });
     };
     this.ScrollToElement = function (id, speed) {
+        
         var offset = $(id).offset().top - 96;        
+        if (Browser.isIPhone() || Browser.isAndroid()){
+            offset = offset - 38;
+        }
         $('body,html').animate({ scrollTop: offset }, speed);        
     };
 };
@@ -295,7 +320,8 @@ var Browser = new function () {
         if (ua.indexOf("ipad") > 0) { data.$b.addClass("iPad"); data.is.mobile = true; }
         else if (ua.indexOf("android") > 0) { data.$b.addClass("Android"); data.is.mobile = true; data.is.Andorid = true; }
         else if (ua.indexOf("ipod") > 0) { data.$b.addClass("iPod"); data.is.mobile = true; data.is.iPod = true; }
-
+        else if (ua.indexOf("iphone") > 0)  data.$b.addClass("iPhone");
+        
         if (ua.indexOf('firefox') > 0) { data.$b.addClass("Firefox"); }
         if (data.is.mobile) t.Orientation();
 
@@ -309,9 +335,13 @@ var Browser = new function () {
         else if ((ua.indexOf('Trident') > 0) && (navigator.userAgent.indexOf('rv:11.') > 0)) data.$b.addClass("ie11"); //IE11     
     };
     this.isIpad = function () {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("ipad") > 0)  data.$b.addClass("iPad");
         return (data.$b.hasClass("iPad"));
     };
     this.isIPhone = function () {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("iphone") > 0)  data.$b.addClass("iPhone");
         return (data.$b.hasClass("iPhone"));
     };
     this.isAndroid = function () {

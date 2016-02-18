@@ -186,21 +186,22 @@ body > .container-fluid.main{
     margin: 15px 0 0 0;
     float: none;
 }
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>a:focus,
-.navbar-inverse .navbar-nav>li>a.active{
-    color: #ffe6aa;
-    padding: 0;
-    background: url("../images/icons/arrow-bottom-active.png") no-repeat center bottom;
-}
 
 .navbar-inverse .navbar-nav>.active>a, 
 .navbar-inverse .navbar-nav>.active>a:focus,
 .navbar-inverse .navbar-nav>.active>a:hover{
-    color: #ffe6aa;
+    background-color: transparent;
+}
+.navbar-inverse a.mPS2id-highlight,
+.navbar-inverse .navbar-nav>li>a:focus{
+    color: #ffe6aa!important;
     padding: 0;
     background: url("../images/icons/arrow-bottom-active.png") no-repeat center bottom;
 }
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #ffe6aa!important;
+}
+
 
 .call-answer{    
     text-align: center;
@@ -317,18 +318,33 @@ body > .container-fluid.main{
     font-family: GothamPro-Bold;
     border-radius:0!important;      
     color: white;
-    transform:translateY(0);
-    transition: transform 0.5s ease;
+    text-align: center;
 };
 
-.btn.btn-primary:focus,
-.btn.btn-primary:hover{
+.btn-primary:hover{
+    background: red!important;
+}
+
+a.btn.btn-primary:hover,
+input.btn.btn-primary:hover{
     background-color: transparent!important;
     background-position: left bottom!important;            
     color: white;  
 }
-.btn.btn-primary:hover{
-    transform:translateY(2px);    
+
+.btn.btn-primary:focus{
+    background-color: transparent!important;
+    background-position: left top!important;            
+    color: white;  
+}
+.btn.btn-primary:active{
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url("../images/btn-blick.png");
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-size: 255px;
+    box-shadow: none;
 }
 
 .btn.btn-default{
@@ -355,6 +371,16 @@ body > .container-fluid.main{
 }
 .btn.btn-default:focus{
     background-color: transparent!important;
+}
+
+.btn.btn-default:active{
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url("../images/btn-gray.png");
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-size: 255px;
+    box-shadow: none;
 }
 
 /*ourServices*/
@@ -463,6 +489,11 @@ body > .container-fluid.main{
     font-style: normal;
     padding-right: 7px;
     text-align: right;    
+    transform:translateY(0);
+    transition: transform 0.5s ease;
+}
+.whatDoing .base .item:hover i{
+    transform:translateY(3px)!important;
 }
 .whatDoing .base .item span{
     display: block;
@@ -1367,6 +1398,9 @@ footer address{
 {
     color: #333;
 }
+.calculatePrice .text-empty.error::-webkit-input-placeholder{
+    color: #f24e22;
+}
 
 .calculation .block-side{
     height: 145px;
@@ -1437,3 +1471,40 @@ footer address{
     -moz-box-shadow: 0px 0px 10px 0px #fff;
     box-shadow: 0px 0px 10px 0px #fff;
 }
+
+/* for Mobile*/
+.header.fixit .navbar-brand{ display: none;}
+.header.fixit .will-call{ display: none;}
+.header.fixit .navbar-header .will-call{ display: block;}
+.header.fixit .navbar .topLevel {
+    min-height: 0;
+    height: 0px;
+}
+.header.fixit .navbar-collapse{
+    background: #00bff3;
+}
+.header.fixit .topLevel .container{ min-height: 43px;}
+.header.fixit .navbar-header a.call{ display: none;}
+.header.fixit .navbar-header i.call{
+    display: block;
+    font-size: 28px;
+    color: white;
+    font-family: GothamPro-Bold;
+    font-style: normal;
+    height: 24px;
+    width:auto;
+    line-height: 50px;
+    padding-left: 20px;
+    margin-bottom: 13px;
+}
+.header.fixit .navbar-collapse.collapse {height: 50px;}
+.header.fixit .navbar-inverse .navbar-toggle {margin-top: 5px;
+    position: relative;
+    z-index: 20;
+}
+/* for Mobile=========*/
+
+.navbar-inverse .navbar-toggle .icon-bar{ background: white;}
+.navbar-inverse .navbar-toggle { border-color: white; border-width: 2px; }
+
+.whatDoing .block-btn{ margin-bottom: 15px;}

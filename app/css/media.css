@@ -71,9 +71,9 @@
     }
 
     
-    .header .will-call{ height: 75px;}   
+    .header .will-call{ height: 75px; float: none;}   
+    
     .navbar-collapse{ margin-top: -15px;}
-    .header .will-call{ float: none;}
     .navbar-brand span {
         float: none;
         margin-top: 35px;
@@ -97,23 +97,23 @@
     .whatDoing .base .item1 {
         right: 0;
         top: -138px;
-        width: 228px;
+        width: 340px;
     }
     .whatDoing .base .item2 {
         left: 0;
         top: -54px;
-        width: 175px;
+        width: 285px;
     }
     .whatDoing .base .item3 {
-        right: 0;
+        right: 82px;
         top: 138px;
-        width: 146px;
+        width: 195px;
         text-align: right;
     }
     .whatDoing .base .item4 {
-        left: 0;
-        top: 180px;
-        width: 122px;
+            left: 0;
+            top: 134px;
+            width: 236px;
     }
     .whatDoing .base .item4 span {
         padding-top: 30px;
@@ -135,10 +135,45 @@
         position: relative;
         z-index: 10;
     }
+    .list-offices{ padding-bottom: 10px;}
 }
 
 @media (max-width: 768px)
 {
+    
+    .whatDoing .base .item1 {
+        right: 0;
+        top: -138px;
+        width: 228px;
+    }
+    .whatDoing .base .item2 {
+        left: 0;
+        top: -54px;
+        width: 175px;
+    }
+    .whatDoing .base .item3 {
+        right: 0;
+        top: 138px;
+        width: 146px;
+        text-align: right;
+    }
+    .whatDoing .base .item4 {
+        left: 0;
+        top: 180px;
+        width: 122px;
+    }
+    
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover,
+    .navbar-inverse .navbar-nav>li>a:hover,
+    .navbar-inverse .navbar-nav>li>a:focus,
+    .navbar-inverse .navbar-nav>li>a.active,
+    .navbar-inverse .navbar-nav>.active>a{
+        background: none!important;
+        background-color: transparent!important;
+    }
+    
     .whatDoing {
         min-height: 735px;
     }
@@ -196,6 +231,7 @@
     
     .main-view {
         max-width: 400px!important;
+        margin-top: 0!important;
     }
     .main-view .inner-title {
         color: #333333;
@@ -212,7 +248,7 @@
         font-size: 15px;
         color: white;
         font-family: GothamProRegular;
-        margin-top: 103px;
+        margin-top: 100px;
         padding-right: 63px;
         text-align: right;
     }
@@ -305,28 +341,26 @@
         padding: 0;
     }
     .header .will-call {
+/*
         position: relative;
         right: inherit;
         top: inherit;
         text-align: right;
         margin-top: 115px;
+*/
+        float: none;
+        margin-top: 40px;
     }
     .navbar .topLevel {
         min-height: 135px;
         height: auto;
     }
-    .header .will-call {
-        float: right;
-    }
-    .header .will-call {
-        margin-top: 40px;
-    }
     .collapse{ display: block;}
     .navbar-inverse .navbar-nav>li{ width: 100%;}
     .navbar-collapse{ padding: 0;}
-    .navbar-collapse ul.nav{ height: 0; overflow: hidden;}
+/*    .navbar-collapse ul.nav{ height: 0; overflow: hidden;}*/
     .navbar-collapse.in ul.nav{ height: auto;}
-    .navbar-header{ background: #00bff3;}
+    .navbar-header{ background: none;}
     .navbar-inverse ul.nav.navbar-nav{ margin-top: 0;}
     .title{ 
         background: none;
@@ -406,9 +440,7 @@
     .main-view .level {
         margin-top: 15px;
     }
-    .main-view .description {
-        margin-top: 100px;
-    }
+    
     .call-answer {
         margin-right: 11%;
     }
@@ -416,7 +448,11 @@
 }
 
 @media (max-width: 500px)
-{
+{    
+    .ourServices .item-col:last-child{
+        width: 100%!important;
+    }
+    
     .calculatePrice .modal-dialog{ display: block;}
     .steps ul{ padding: 0 0 0 15px;}
     .steps li {
@@ -436,7 +472,9 @@
         min-height: 270px;
         padding-top: 0;
     }
-    .navbar-brand{ margin-left: 15px;}
+    .navbar-brand {
+        margin-left: 1px;
+    }
     .will-call{ margin: 0;}
     
     .header .will-call {
@@ -450,4 +488,178 @@
         min-height: 140px;
     }
     .modal.in .modal-dialog{ padding-top: 30%;}
+    
+    .row{
+        margin: 0;
+    }
+    .call-answer {
+        margin-right: 5%;
+    }
+     
+    .slick-prev,
+    .slick-next {
+        top: 19%;
+    }
+    .catalog .image {
+        min-height: 210px;
+    }
+    .ourServices .block-item .image{ margin: 0 auto;}
+    .ourServices .block-item .image{ border:10px solid white!important;  }
+    .ourServices .block-item .image-top{ display: none;}
+    .ourServices .block-item .image:before{
+        position: absolute;
+        display: block;
+        left: -10px;
+        top: -10px;
+        height: 147px;
+        width: 147px;
+        background: url("../images/icon-circle.png") no-repeat center top;    
+        z-index: 10;
+        content: "";
+    }
+    .step-work .base .image{ margin: 0 auto;}
+    .step-work .inner-minHeight {        
+        margin-left: -15px;
+    }
+    .step-work p {
+        text-align: center;
+    }
+    .title {
+        line-height: 50px;
+    }
+    .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev{ left: 24px;}
+    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{ right: 24px;}
+    .list-works .base {
+        width: 275px;
+    }
+    .list-offices .call-answer {
+        top: 295px;
+        display: none;
+    }
+    .modal .call-answer {
+        width: 100%;
+        float: none;
+    }
+    .modal .call-answer .ul-form {
+        width: 260px;
+    }
+    .btn-close {
+        position: absolute;
+        right: -32px;
+    }
+    
+    
+    
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-header { float: none; }
+    
+    .navbar-collapse.in {
+        float: none;
+        background: url("../images/gray-space.png") repeat;
+        border-color: transparent;    
+    }
+    .navbar-collapse.in .navbar-nav > li > a{
+        line-height: 40px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar-collapse.in .contact {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+    .navbar-inverse .navbar-toggle{ margin-top: 0px;}
+
+    .navbar-collapse.collapse {
+        display: block;
+        height: 43px;
+        overflow: hidden!important;
+        border-color: transparent;
+        margin-top: -43px;
+    }
+     .outside100 {
+        margin-top: 10px;
+    }   
+     .main-view .description {
+        margin-top: 89px;
+        padding-right: 51px;
+    }
+    .solutions .image {
+        height: 300px;
+    }
+    .solutions .item {
+        margin-bottom: 30px;
+    }
+    .navbar-collapse .navbar-header{ position: relative;}
+    .navbar-collapse .navbar-header:before{
+        background: url("../images/top-space.png") no-repeat center top;        
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 38px;
+        z-index: 5;
+        width: 100%;
+        height: 4px;
+    }
+    .navbar-inverse ul.nav.navbar-nav{ margin-top: -4px;}
+    
+    
+    /*--------------*/
+    .header .main-view .description {
+        left: 133px;
+        top: 332px;        
+    }
+    /*--------------*/
+    
+    .header .main-view{ float: none;}
+    .header .main-view .inner-title {
+        margin-top: 0;
+        position: absolute;
+        left: 0;
+        top: 116px;
+    }   
+    .header .main-view .level {
+        margin-top: 0;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 200px;
+        padding-left: 22px;
+        font-size: 17px!important;
+    }
+    .Android .header .main-view .description,
+    .iPhone .header .main-view .description {
+        margin-top: 0;
+        padding-right: 0;
+        display: block;
+        position: absolute;
+        left: 100px;
+        top: 328px;
+        font-size: 15px;
+    }
+    .header .container{ padding: 0;}
+    .call-answer.stay-blanket {
+        width: 290px;
+        float: none;
+        margin: 0 auto;
+    }
+    .ourServices{ padding-top: 15px;}
  
+    .catalogAbout:before,
+    .catalog:before{ display: none;}
+    
+    .ourWorks{ margin: 15px 0 0 0;}
+    .solutions .col-sm-4:last-child .item {
+        margin-bottom: 5px;
+    }
+    .list-offices .item-address{ padding: 0;}
+    footer .will-call{ display: none;}
+    footer .item:last-child{ display: none;}
+    .block-map iframe{ height: 300px;}
+    .step-work .base{ margin-left: 0; margin-right: 0;}
+    .step-work .container{ padding: 0;}
+    .catalog .block-btn{ margin-bottom: 25px;     margin-top: 60px;}
+}

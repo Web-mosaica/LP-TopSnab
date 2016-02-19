@@ -1,5 +1,1 @@
-var tobSnab = angular.module('tobSnab',[        
-    'tobSnabControllers',
-    'tobSnabFactories'
-    ]);
-
+var tobSnab=angular.module('tobSnab',['tobSnabControllers','tobSnabFactories']);

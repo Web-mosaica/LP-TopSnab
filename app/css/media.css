@@ -1,3 +1,4 @@
+
 @media (min-width: 1200px)
 {
     .container {
@@ -14,7 +15,6 @@
 
 @media (max-width: 1024px)
 {
-    
     .slick-slide img {        
         width: 80%;
         margin: 0 auto;
@@ -379,9 +379,7 @@
         margin-bottom: 5px;
         text-align: center;
     }
-    .container-fluid{
-        padding:0 5px;
-    }
+    
     footer .item {
         min-height: 50px;             
     }
@@ -498,9 +496,11 @@
     }
     .modal.in .modal-dialog{ padding-top: 30%;}
     
+/*
     .row{
         margin: 0;
     }
+*/
     .call-answer {
         margin-right: 5%;
     }
@@ -635,9 +635,9 @@
         position: absolute;
         display: block;
         left: 0;
-        top: 200px;
-        padding-left: 22px;
-        font-size: 17px!important;
+        top: 202px;
+        padding-left: 34px;
+        font-size: 18px!important;
     }
     .Android .header .main-view .description,
     .iPhone .header .main-view .description {
@@ -645,9 +645,9 @@
         padding-right: 0;
         display: block;
         position: absolute;
-        left: 100px;
-        top: 328px;
-        font-size: 15px;
+        left: 97px;
+        top: 332px;
+        font-size: 16px;
     }
     .header .container{ padding: 0;}
     .call-answer.stay-blanket {
@@ -688,4 +688,20 @@
     .step-work p{ margin-bottom: 40px;}
     .item-address .title{ margin-top: 16px;}
     .block-map { min-height: 304px; }
+    
+    .ourWorks .carousel-control{ width: 43px;}
+    .carousel-control.right{ right: -10px;}
+    .carousel-control.left{ left: -10px; }
+    
+    .carousel-control div {
+        width: 43px!important;
+        height: 83px!important;
+    }
+    
+}
+@media (max-width: 400px)
+{
+    .main {
+        width: 400px;
+    }
 }

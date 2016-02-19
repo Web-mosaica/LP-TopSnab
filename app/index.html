@@ -288,35 +288,33 @@
                 </section>
         
                 <section id="catalog" class="row catalog">                    
-                    <div class="container-fluid topBackground">
-                        <div class="row">
-                            <div class="container">
-                                <h3 class="title">{{model.catalog.title}}</h3>                                                            
-                                
-                                <div class="multiple-items">
-                                     <div class="col-sm-4 item{{$index+1}}" data-ng-repeat="item in model.catalog.list">                                
-                                         <div class="item">
-                                            <i class="image"><img src="javascript:void(0)" data-ng-src="uploads/{{item.image}}" alt="" /></i>
-                                            <span class="title-small">{{item.title}}</span>                                            
+                    <div class="topBackground">
+                        <div class="container">
+                            <h3 class="title">{{model.catalog.title}}</h3>                                                            
 
-                                            <p class="description">{{item.description}}</p>
-                                            <i class="price">{{item.price}}</i>
-                                        </div>
+                            <div class="multiple-items">
+                                 <div class="col-sm-4 item{{$index+1}}" data-ng-repeat="item in model.catalog.list">                                
+                                     <div class="item">
+                                        <i class="image"><img src="javascript:void(0)" data-ng-src="uploads/{{item.image}}" alt="" /></i>
+                                        <span class="title-small">{{item.title}}</span>                                            
+
+                                        <p class="description">{{item.description}}</p>
+                                        <i class="price">{{item.price}}</i>
                                     </div>
                                 </div>
-                                
-                                <div class="block-btn text-center">
+                            </div>
+
+                            <div class="block-btn text-center">
 <!--                                    <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>-->
-                                    <input type="submit" data-link="{{model.catalog.download}}" value="{{model.catalog.button}}" class="btn btn-primary uppercase download">                                                                        
-                                </div>
+                                <input type="submit" data-link="{{model.catalog.download}}" value="{{model.catalog.button}}" class="btn btn-primary uppercase download">                                                                        
                             </div>
                         </div>
                     </div>
                 </section>
         
                 <section id="stepWork" class="step-work catalogAbout relative row">
-                    <div class="container-fluid back-side">
-                        <div class="row background">
+                    <div class="back-side">
+                        <div class="background">
                             <div class="container">
                                 <h4 class="title">{{model.stepWork.title}}</h4>
                                 <div class="base">
@@ -338,13 +336,11 @@
                 </section>
         
                 <section id="listWorks" class="list-works row">
-                    <div class="container-fluid back-side">
-                        <div class="row">
-                            <div class="container">
-                                <h5 class="title yellow dark">{{model.listWorks.title}}</h5>                                
-                                <div data-bootstrapslider  data-ng-model="listWorks" id="baseBlockForOurWork" data-id="ourWorks" data-show="6" data-show-ol="false"></div>                                
-                            </div>                    
-                        </div>                    
+                    <div class="back-side">
+                        <div class="container">
+                            <h5 class="title yellow dark">{{model.listWorks.title}}</h5>                                
+                            <div data-bootstrapslider  data-ng-model="listWorks" id="baseBlockForOurWork" data-id="ourWorks" data-show="6" data-show-ol="false"></div>                                
+                        </div>                
                     </div>
                 </section>
         

@@ -155,6 +155,7 @@ body > .container-fluid.main{
     margin: 0 auto;
     background-color: white;
     border: none;
+    z-index: 40;
 }
 .navbar-inverse .navbar-nav{
     max-width: 747px;
@@ -183,6 +184,7 @@ body > .container-fluid.main{
     padding: 0;
     margin: 0;
     text-transform: uppercase;
+    transition: color 0.5s ease;
 }
 .navbar-nav {
     margin: 15px 0 0 0;
@@ -194,11 +196,14 @@ body > .container-fluid.main{
 .navbar-inverse .navbar-nav>.active>a:hover{
     background-color: transparent;
 }
-.navbar-inverse a.mPS2id-highlight,
-.navbar-inverse .navbar-nav>li>a:focus{
+.navbar-inverse a.mPS2id-highlight{
     color: #ffe6aa!important;
     padding: 0;
     background: url("../images/icons/arrow-bottom-active.png") no-repeat center bottom;
+}
+.navbar-inverse .navbar-nav>li>a:active{
+    color: #ffe6aa!important;
+    padding: 0;
 }
 .navbar-inverse .navbar-nav>li>a:hover{
     color: #ffe6aa!important;
@@ -1194,9 +1199,15 @@ a.btn.btn-primary:hover,
     left: -25px;
     bottom: -75px;
     width: 100%;
+    z-index: 50;
 }
 .inner-contact b{ display: block;}
 
+.block-map{
+    position: relative;
+    overflow: hidden;
+    min-height: 450px;
+}
 .block-map iframe{
     height: 450px;
     margin-top: 0;
@@ -1233,6 +1244,8 @@ a.btn.btn-primary:hover,
 footer{
     background-color: white;
     min-height: 98px;
+    position: relative;
+    z-index: 10;
 }
 
 .will-call i{ margin-bottom: 5px;}
@@ -1630,3 +1643,4 @@ footer address{
     margin: 0 auto;
     display: block;
 }
+.call-answer.stay-blanket{ margin-top: 26px; z-index: 35;}

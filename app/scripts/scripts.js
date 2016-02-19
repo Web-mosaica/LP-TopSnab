@@ -72,7 +72,7 @@ var Site = new function () {
                         ];
                             
                         var formWindow ={
-                            "Тип окна": $(".calculatePrice .item.active img").attr("type"),
+                            "Тип окна": $(".calculatePrice .item.active img").data("type"),
                             "Высота (мм)":$(".calculatePrice .win_height").val(),
                             "Ширина (мм)":$(".calculatePrice .win_width").val(),
                             "Дополнительно":{
@@ -145,13 +145,21 @@ var Site = new function () {
             var id =  $('#callForm');
             id.find(".call-answer").removeClass("small-window");            
             id.find(".block-before").attr("style","");
-            id.modal({show:"true"}); 
+            id.modal({show:true}); 
         });    
         
          if ($("body").width() < 700)   
-            { $("#baseBlockForOurWork").attr("data-show", 2); }
-      
+            { $("#baseBlockForOurWork").attr("data-show", 2); }      
     };
+    this.verify = function(){
+            $("img").each(function(){
+               var t = $(this);
+                if (t.attr("alt") == undefined)
+                    {
+                        t.attr("alt","");
+                    }
+            });
+    };        
     this.windowChoose = function(){
         var obj = $(".calculatePrice .item img");
         var a = "active";
@@ -206,14 +214,16 @@ var Site = new function () {
     };
     this.OnLoad = function(){
         this.windowChoose();
-        
+        //this.verify();
         
         $(".list-works .base a").fancybox({
             'transitionIn'	:	'elastic',
             'transitionOut'	:	'elastic',
             'speedIn'		:	600, 
             'speedOut'		:	200, 
-            'overlayShow'	:	false
+            'overlayShow'	:	false,
+             'padding' : 0,
+             'helpers': {overlay: { locked: false}}
         });
         
         $(".navbar-toggle").bind("click", function(e){
@@ -228,7 +238,7 @@ var Site = new function () {
             return false;
         });                
         
-        $("a[rel='m_PageScroll2id']").mPageScroll2id({            
+        $("a[data-rel='m_PageScroll2id']").mPageScroll2id({            
             scrollSpeed: 500,
             offset: 100            
         });
@@ -246,26 +256,12 @@ var Site = new function () {
             });
         
         
-        $(".arrow-bottom").bind("click",function(){
-            
-        });
-        
-//        $(document).on('click', 'a[data-to]', function (e) {             
-//            e.preventDefault();            
-//            var el = $(e.target).attr("data-to");
-//            var a = "active";
-//            $('nav li').removeClass(a);
-//            $("a[data-to='" + el + "']").closest('li').addClass(a);
-//            Site.ScrollToElement($(el), 1000);
-//            return false;
-//        })
-        
         $(".btnToCalculatePrice").bind("click", function(e){
             e.preventDefault();
             
             var a = "active";
             var t = $(this).addClass(a);
-            var id =  $('#calculatePrice').modal({show:"true"}); 
+            var id =  $('#calculatePrice').modal({show:true, keyboard: false, backdrop: 'static'}); 
             
             var item = id.find(".images .item").removeClass(a).eq(t.data("index")).addClass(a);             
             var source = item.find("img").first().attr("src");

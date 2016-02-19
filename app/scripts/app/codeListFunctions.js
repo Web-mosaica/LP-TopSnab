@@ -30,7 +30,7 @@ var app = new function(){
             var currentGroup = 0;
             var listImages = angular.element('<div></div>');            
             list.forEach(function(row){                
-                var a = angular.element('<a></a>').attr("href","uploads/"+row.image).attr("title",row.description).attr("data-lightbox","image-1");                
+                var a = angular.element('<a></a>').attr("href","uploads/"+row.image).attr("title",row.description).attr("rel","group");                
                 var image = angular.element('<img />').attr("src","uploads/"+row.image).attr("alt",row.description);
                 var p = angular.element('<p></p>').addClass("description").html(row.description);
                 var space = angular.element('<div></div>').addClass("space");

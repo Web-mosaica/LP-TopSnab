@@ -1,6 +1,7 @@
 @media (min-width:1200px){.container{width:980px;}
 }
-@media (min-width:768px){.calculatePrice .modal-dialog{width:820px!important;}
+@media (min-width:768px){
+    .calculatePrice .modal-dialog{width:820px!important;}    
 }
 @media (max-width:1024px){.slick-slide img{width:80%;margin:0 auto;}
 .catalog .image{min-height:270px;}
@@ -26,7 +27,9 @@
 .catalog .slick-next{right:-25px;}
 .slick-initialized .slick-slide{padding:0;}
 .step-work .base{background-size:1760px;}
-.header .will-call{height:75px;float:none;}
+
+    .header .will-call{height:75px;float:none;}
+    
 .navbar-collapse{margin-top:-15px;}
 .navbar-brand span{float:none;margin-top:35px;text-align:left;margin-left:-12px;}
 .solutions .col-sm-4{width:50%!important;}
@@ -43,7 +46,9 @@
 .solutions .item{min-width:50%;position:relative;z-index:10;}
 .list-offices{padding-bottom:10px;}
 }
-@media (max-width:768px){.step-work .background:before{display:none;}
+@media (max-width:768px){
+body > .container-fluid.main{background-position:left top;}
+.step-work .background:before{display:none;}
 .whatDoing .base .item1{right:0;top:-138px;width:228px;}
 .whatDoing .base .item2{left:0;top:-54px;width:175px;}
 .whatDoing .base .item3{right:0;top:138px;width:146px;text-align:right;}
@@ -70,7 +75,10 @@
 .main-view{max-width:400px!important;margin-top:0!important;}
 .main-view .inner-title{color:#333333;font-size:39px;font-family:GothamPro-Black;line-height:39px;margin-top:78px;}
 .main-view .level{font-size:20px;}
-.main-view .description{font-size:15px;color:white;font-family:GothamProRegular;margin-top:100px;padding-right:63px;text-align:right;}
+.main-view .description{
+    font-size:15px;color:white;font-family:GothamProRegular;
+    margin-top:104px;
+    padding-right:63px;text-align:right;}
 .divform{width:auto;float:none!important;right:0;padding:0!important;}
 .call-answer{width:290px;float:right;}
 .call-answer .ul-form{padding:0;}
@@ -99,16 +107,28 @@ footer address{display:block;text-align:center;}
 footer .will-call{margin-right:28%;}
 footer address{line-height:20px;}
 .share{padding-top:0;}
+
+.navbar-collapse .navbar-header{position:relative;}
+.navbar-collapse .navbar-header:before{background:url("../images/top-space.png") no-repeat center top;position:absolute;display:block;left:0;top:38px;z-index:5;width:100%;height:4px;}
+
 }
 @media (max-width:768px){.topLevel .container{padding:0;}
-.header .will-call{float:none;margin-top:40px;}
+.header .will-call{float:none; margin-top:20px;}
+    
+    .navbar-inverse a.mPS2id-highlight{ background: none;}
+    
 .navbar .topLevel{min-height:135px;height:auto;}
 .collapse{display:block;}
 .navbar-inverse .navbar-nav>li{width:100%;}
 .navbar-collapse{padding:0;}
-.navbar-collapse.in ul.nav{height:auto;}
+.navbar-collapse.in ul.nav{height:100%;}
 .navbar-header{background:none;}
-.navbar-inverse ul.nav.navbar-nav{margin-top:0;}
+.navbar-inverse ul.nav.navbar-nav{
+    margin-top:-2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    }
 .title{background:none;line-height:35px;padding:0;height:auto;margin-bottom:5px;text-align:center;}
 footer .item{min-height:50px;}
 footer .will-call{margin:0;}
@@ -128,7 +148,8 @@ footer{padding:0 10px;}
 .catalog .slick-prev{left:7px;}
 .slick-dots{bottom:0;}
 .catalog .multiple-items{margin-bottom:40px;}
-.slick-dots{bottom:-45px;z-index:50;}
+.slick-dots{bottom:-45px;z-index:35;}
+    
 .ourServices .item-col{width:50%;}
 .whatDoing{min-height:auto;margin-bottom:15px;}
 .whatDoing .base{padding-top:250px;}
@@ -138,8 +159,29 @@ footer{padding:0 10px;}
 .main-view{margin-top:35px;background-position:center;}
 .main-view .inner-title{margin-top:108px;}
 .main-view .level{margin-top:15px;}
-.call-answer{margin-right:11%;}
+
 .step-work .base{margin-right:0;margin-top:40px;}
+
+.navbar-collapse .navbar-header{position:relative;}
+.navbar-collapse .navbar-header:before{background:url("../images/top-space.png") no-repeat center top;position:absolute;display:block;left:0;top:38px;z-index:5;width:100%;height:4px;}
+
+.navbar-collapse.collapse{
+    display:block;
+    height:50px;
+    padding-top: 7px;
+    overflow:hidden!important;border-color:transparent;
+    margin-top:-39px;
+    }
+.navbar-toggle{display:block;}
+.navbar-header{float:none;}
+.navbar-collapse.in{float:none;background:url("../images/gray-space.png") repeat;border-color:transparent;}
+.navbar-collapse.in .navbar-nav > li > a{line-height:40px;text-align:center;padding:0;}
+.navbar-collapse.in .contact{position:absolute;right:30px;top:15px;}
+.navbar-inverse .navbar-toggle{
+    margin-top:0px;
+    background-color: #00bff3;
+    }
+    
 }
 @media (max-width:500px){.ourServices .item-col:last-child{width:100%!important;}
 .calculatePrice .modal-dialog{display:block;}
@@ -171,24 +213,37 @@ footer{padding:0 10px;}
 .modal .call-answer{width:100%;float:none;}
 .modal .call-answer .ul-form{width:260px;}
 .btn-close{position:absolute;right:-32px;}
-.navbar-toggle{display:block;}
-.navbar-header{float:none;}
-.navbar-collapse.in{float:none;background:url("../images/gray-space.png") repeat;border-color:transparent;}
-.navbar-collapse.in .navbar-nav > li > a{line-height:40px;text-align:center;padding:0;}
-.navbar-collapse.in .contact{position:absolute;right:30px;top:15px;}
-.navbar-inverse .navbar-toggle{margin-top:0px;}
-.navbar-collapse.collapse{display:block;height:43px;overflow:hidden!important;border-color:transparent;margin-top:-43px;}
-.outside100{margin-top:10px;}
+
+.outside100{margin-top:30px;}
 .main-view .description{margin-top:89px;padding-right:51px;}
 .solutions .image{height:300px;}
 .solutions .item{margin-bottom:30px;}
-.navbar-collapse .navbar-header{position:relative;}
-.navbar-collapse .navbar-header:before{background:url("../images/top-space.png") no-repeat center top;position:absolute;display:block;left:0;top:38px;z-index:5;width:100%;height:4px;}
+
 .navbar-inverse ul.nav.navbar-nav{margin-top:-4px;}
-.header .main-view .description{left:133px;top:332px;}
+    
+.header .main-view .description{
+    left: 105px;
+    top: 244px;
+    position: absolute;
+    }
+    
 .header .main-view{float:none;}
 .header .main-view .inner-title{margin-top:0;position:absolute;left:0;top:116px;}
-.header .main-view .level{margin-top:0;position:absolute;display:block;left:0;top:204px;padding-left:34px;font-size:18px!important;}
+
+.header .main-view .level{
+    margin-top:0;
+    position:absolute;
+    display:block;     
+    left: 0;
+    top: 203px;
+    padding-left:34px;font-size:18px!important;}
+
+.iPhone .header .main-view .level,
+.Android .header .main-view .level{margin-top:0;position:absolute;display:block;left:0;top:204px;padding-left:34px;font-size:18px!important;}
+    
+    .Android .navbar-inverse a.mPS2id-highlight,    
+    .iPhone .navbar-inverse a.mPS2id-highlight{ background: none;}    
+    
 .Android .header .main-view .description,
 .iPhone .header .main-view .description{margin-top:0;padding-right:0;display:block;position:absolute;left:97px;top:332px;font-size:16px;}
 .header .container{padding:0;}
@@ -205,12 +260,17 @@ footer .item:last-child{display:none;}
 .step-work .base{margin-left:0;margin-right:0;}
 .step-work .container{padding:0;}
 .catalog .block-btn{margin-bottom:42px;margin-top:60px;}
-body > .container-fluid.main{background-position:left top;}
-.inner-contact{max-width:100%;margin-top:43px;left:0;bottom:-77px;width:100%;}
+
+.inner-contact{    max-width: 100%;
+    margin-top: 0;
+    left: inherit;
+    bottom: inherit;
+    width: 100%;
+    position: relative;}
 .whatDoing .block-btn{margin-bottom:40px;}
 .whatDoing{margin-bottom:7px!important;}
 .solutions .back{padding-bottom:40px;}
-.step-work p{margin-bottom:40px;}
+.step-work p{margin-bottom:40px; padding: 0 5px;}
 .item-address .title{margin-top:16px;}
 .block-map{min-height:304px;}
 .ourWorks .carousel-control{width:43px;}
@@ -224,6 +284,14 @@ body > .container-fluid.main{background-position:left top;}
 .pull-right.divform{margin-right:0;}
 .list-offices .description{text-align:left;}
 .list-offices .description .big{font-size:19px;}
+    
+    .main-view{ margin: 0;}
+    .header .main-view .inner-title{ top: 107px;}
+
+.navbar-collapse.collapse{}
+ 
+    
 }
-@media (max-width:400px){.main{width:400px;}
+@media (max-width:400px){
+    .main{width:400px;}
 }

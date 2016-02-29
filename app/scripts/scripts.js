@@ -20,6 +20,7 @@ var Site = new function() {
             }, 700);
         });
         $('input[type=tel]').mask("+7(999) 999-9999");
+        
         $(".call-back-form").each(function() {
             var it = $(this);
             it.validate({
@@ -72,6 +73,8 @@ var Site = new function() {
                             }
                         }
                     }
+                                        
+                    
                     $.ajax({
                         type: "POST",
                         url: "back-end/main.php",
@@ -90,15 +93,15 @@ var Site = new function() {
                                 }, 500, function() {
                                     $(".thanks").show();
                                 });
-                            } else $('#callForm').modal({
-                                show: 'true'
-                            }).find(".call-answer").addClass("small-window");
+                            } else 
+                                $('#callForm').modal({show: 'true'}).find(".call-answer").addClass("small-window");
                         }
                         setTimeout(function() {
                             if (label == undefined) {
                                 $('.modal').modal('hide');
+                                $.magnificPopup.close();
                             }
-                        }, 3000);
+                        }, 3000);                    
                         $(".call-back-form").trigger("reset");
                     });
                     return false;
@@ -114,17 +117,7 @@ var Site = new function() {
         });
         $(".download").bind("click", function(e) {
             window.location.href = $(this).data("link");
-        });
-        $(".call").bind("click", function(e) {
-            e.preventDefault();
-            var t = $(this);
-            var id = $('#callForm');
-            id.find(".call-answer").removeClass("small-window");
-            id.find(".block-before").attr("style", "");            
-            id.modal('toggle');
-            return false;
-        });
-        
+        });       
         
         if ($("body").width() < 700) {
             $("#baseBlockForOurWork").attr("data-show", 2);
@@ -165,17 +158,20 @@ var Site = new function() {
         if (scroll > 0) {
             if ((Browser.isIPhone() || Browser.isAndroid()) && (!header.hasClass(clazz))) {
                 header.addClass(clazz);
-                $(".will-call i").addClass("call");
+                    var text = $(".will-call i").first().addClass("telephone").text();
                 header.find(".navbar-header").append($(".will-call").html());
-                $(".call").bind("click", function(e) {
-                    e.preventDefault();
-                    var t = $(this);
-                    var id = $('#callForm');
-                    id.find(".call-answer").removeClass("small-window");
-                    id.find(".block-before").attr("style", "");
-                    id.modal({
-                        show: "true"
-                    });
+                header.find(".navbar-header a.call").text(text);
+                
+                 header.find('.call').magnificPopup({
+                    type: 'inline',
+                    fixedContentPos: false,
+                    fixedBgPos: true,
+                    overflowY: 'auto',
+                    closeBtnInside: true,
+                    preloader: false,
+                    midClick: true,
+                    removalDelay: 300,
+                    mainClass: 'my-mfp-slide-bottom'                    
                 });
             }
         } else {
@@ -225,28 +221,75 @@ var Site = new function() {
             slidesToShow: ($("body").width() > 768) ? 3 : 1,
             slidesToScroll: ($("body").width() > 768) ? 3 : 1,
         });
-        $(".btnToCalculatePrice").bind("click", function(e) {
-            e.preventDefault();
-            var a = "active";
-            var t = $(this).addClass(a);
-            var id = $('#calculatePrice').modal({
-                show: true,
-                keyboard: false,
-                backdrop: 'static'
-            });
-            var item = id.find(".images .item").removeClass(a).eq(t.data("index")).addClass(a);
-            var source = item.find("img").first().attr("src");
-            source = source.substring(source.lastIndexOf("/") + 1);
-            id.find(".large").attr("src", "uploads/" + source);            
-            
-//            id.on('shown.bs.modal', function () { 
-//                $("#calculatePrice .window-choose label").focus();                
-//            })
-            
-//            $("#calculatePrice input[type='text']").bind('focusout', function(e) {                
-//                $(this).closest("#calculatePrice").find(".window-choose label").focus();
-//            });                        
+        
+//        $('.list-works .base').magnificPopup({
+//          delegate: 'a', // child items selector, by clicking on it popup will open
+//          type: 'image'
+//          // other options
+//        });
+        
+//        $(".btnToCalculatePrice").bind("click", function(e) {
+//            e.preventDefault();
+//            var a = "active";
+//            var t = $(this).addClass(a);
+//            var id = $('#calculatePrice');
+//            var item = id.find(".images .item").removeClass(a).eq(t.data("index")).addClass(a);
+//            var source = item.find("img").first().attr("src");
+//            source = source.substring(source.lastIndexOf("/") + 1);
+//            id.find(".large").attr("src", "uploads/" + source);            
+//                                  
+//        });
+        
+        $('.call').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom',
+            callbacks:{
+                open:function(){                    
+                    var id = $('#callForm');
+                    id.find(".call-answer").removeClass("small-window");
+                    id.find(".block-before").attr("style", "");                                
+            },
+                close:function(){}
+            }
         });
+        
+         $('.btnToCalculatePrice').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom',
+            callbacks:{
+                open:function(){
+                    
+            },
+                close:function(){}
+            }
+        });
+        
+        //        $(".call").bind("click", function(e) {
+//            e.preventDefault();
+//            var t = $(this);
+//            var id = $('#callForm');
+//            id.find(".call-answer").removeClass("small-window");
+//            id.find(".block-before").attr("style", "");            
+//            id.modal('toggle');
+//            return false;
+//        });
+        
+        
+        
         $(".btn-close").bind("click", function() {
             $($(this).data("target")).modal('hide');
             $(".btn").removeClass("active");
@@ -386,7 +429,13 @@ var Browser = new function() {
             if (this.isIpad()) { 
                 def.remove();
                 view = '<meta name="viewport" content="maximum-scale=1.0, initial-scale=1.0, user-scalable=0">';
-            }
+            } 
+//            else 
+//                if (this.isIPhone())
+//                    {
+//                        def.remove();
+//                        view = '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">';
+//                    }
         };     
         jQuery('head').append(view);
     }

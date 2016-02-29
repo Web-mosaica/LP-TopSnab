@@ -10,6 +10,7 @@
     
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">        
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">        
         <link rel="icon" href="images/favicon.png">
     
         <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -24,11 +25,27 @@
     
     <div class="container-fluid main" data-ng-controller="mainCtrl">
        
-        
-            <div class="modal fade" id="callForm" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal fade" id="callForm" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content call-answer">                   
-                    <a href="javascript:void(0)" class="btn-close" data-target="#callForm" ></a>
+                    <a href="javascript:void(0)" class="btn-close" data-target="#callForm" ></a>                                                                 
+                    <div class="thanks">                    
+                        <div class="title">
+                            <p>
+                                <span class="uppercase fontBold btn-block">{{model.window.isSend.main}}</span>
+                                {{model.window.isSend.others}}
+                            </p>
+                        </div>
+                        <p class="description">{{model.window.isSend.description}}</p>
+                    </div>
+                </div>                                                  
+              </div>   
+          </div>   
+        
+        
+        <div id="mm-1" class="mm-page mm-slideout">
+            <div class="hidden">
+                <div class="popup-form call-answer zoom-anim-dialog " id="callAnswer" >
                     <div class="block-base-windows overfow-hidden">
                         <div class="block-before overfow-hidden">                                                                                                   
                                 <div class="title">
@@ -49,98 +66,20 @@
                                     <input type="submit" value="{{model.form.textButton}}" data-successful class="btn btn-primary uppercase">
                                 </form>                        
                         </div>                        
-                    <div class="thanks">                    
-                        <div class="title">
-                            <p>
-                                <span class="uppercase fontBold btn-block">{{model.window.isSend.main}}</span>
-                                {{model.window.isSend.others}}
-                            </p>
-                        </div>
-                        <p class="description">{{model.window.isSend.description}}</p>
-                    </div>
-                    </div>
-
-                </div>                                                  
-              </div>                              
-            </div>        
-        
-            <div class="modal fade calculatePrice" id="calculatePrice" tabindex="-1" role="dialog" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content clearfix calculation">                   
-                        <a href="javascript:void(0)" class="btn-close" data-target="#calculatePrice" ></a>
-                        <div class="col-sm-6 clear-padding">
-                            <div class="steps">
-                                <ul>
-                                    <li class="window-choose">
-                                        <i class="ico">1</i>
-                                        <label>{{ model.window.calculation.step[0].title }}</label>
-                                        <div class="images">
-                                            <div class="item">
-                                                <img class="active" data-type="1" src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[0].images[0]}}" alt="" />
-                                            </div>
-                                            
-                                            <div class="item">
-                                                <div class="base">
-                                                    <img src="javascript:void(0)" data-type="2" class="base-img" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" alt="" />
-                                                    <div class="select-box">
-                                                        <img src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" alt="" />
-                                                        <img src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[1]}}" alt="" />
-                                                    </div>                                                
-                                                </div>                                                
-                                            </div>
-                                            
-                                            <div class="item">
-                                                <img src="javascript:void(0)" data-type='3' data-ng-src="images/calculation/{{model.window.calculation.step[0].list[2].images[0]}}" alt="" />
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item2">
-                                        <i class="ico">2</i>
-                                        <label>{{ model.window.calculation.step[1].title }}</label>
-                                        <div class="base clearfix">
-                                            <div>{{model.window.calculation.step[1].dimensions[0]}} <input type="text" value="" class="win_height" /></div>
-                                            <div>{{model.window.calculation.step[1].dimensions[1]}} <input type="text" value="" class="win_width" /></div>
-                                        </div>
-                                    </li>
-                                    <li class="checkboxes">
-                                        <i class="ico">3</i>
-                                        <label>{{ model.window.calculation.step[2].title }}</label>
-                                        <div class="base">
-                                            <label data-ng-repeat="item in model.window.calculation.step[2].list">
-                                                <i class="icon"></i>
-                                                <input id="check{{$index}}" value="check{{$index}}" type="checkbox" name="check">   {{item}}
-                                            </label>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <div class="thanks">                    
+                            <div class="title">
+                                <p>
+                                    <span class="uppercase fontBold btn-block">{{model.window.isSend.main}}</span>
+                                    {{model.window.isSend.others}}
+                                </p>
                             </div>
+                            <p class="description">{{model.window.isSend.description}}</p>
                         </div>
-                        <div class="col-sm-6 clear-padding">
-                            <div class="form">
-                                <div class="min-height">
-                                    <img src="javascript:void(0)" class="large" alt="" />
-                                </div>
-                                <div class="block-side">
-                                    <div class="div-form">
-                                        <form class="call-back-form">
-                                            <ul class="ul-form">
-                                                <li>
-                                                    <input type="text" class="people text-empty" required="" id="firstName2" name="firstName2" placeholder="{{model.form.text.firstName}}">
-                                                </li>
-                                                <li>
-                                                    <input type="tel" class="phone text-empty" required="" id="phone2" name="phone2" placeholder="{{model.form.text.phone}}">
-                                                </li>
-                                            </ul>
-                                            <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">                                                    
-                                        </form>      
-                                    </div>
-                                    <div class="successfully"></div>
-                                </div>
-                            </div>
                         </div>
-                    </div>                                                  
-                  </div>                              
-                </div> 
+                </div>
+            </div>
+        </div>
+          
            
                <div class="row header">                    
                    <div class="container relative">    
@@ -157,7 +96,7 @@
                                    <div class="col-md-5">
                                         <div class="will-call">
                                             <i>{{model.contacts.phone}}</i>
-                                           <a href="" class="call">{{model.form.wellCall}}</a>
+                                           <a href="#callAnswer" class="call">{{model.form.wellCall}}</a>
                                        </div>    
                                    </div>              
                                </div>
@@ -241,7 +180,7 @@
                                 </div>
                             </div>
                             <div class="block-btn text-center">
-                                <input type="submit" value="{{model.weDoing.button}}" class="btn btn-primary uppercase call">    
+                                <a href="#callAnswer" class="btn btn-primary uppercase call">{{model.weDoing.button}}</a>
                             </div>
                         </div>
                     </div>
@@ -257,7 +196,7 @@
                                     <span class="title-small">{{item.title}}</span>
                                     <i class="image" style="background-image:url('uploads/{{item.image}}')"></i>
                                      <div class="block-btn text-center">
-                                        <input type="submit" value="{{model.solutions.button}}" data-index="{{$index}}" class="btn btn-default uppercase btnToCalculatePrice">    
+                                         <a href="#calculatePrice" data-index="{{$index}}" class="btn btn-default uppercase btnToCalculatePrice">{{model.solutions.button}}</a>
                                     </div>                                
                                 </div>
                             </div>
@@ -265,6 +204,84 @@
                     </div>
                     </div>
                 </section>
+        
+                <div id="mm-0" class="mm-page mm-slideout">
+                    <div class="hidden">
+                        <div class="popup-form callback zoom-anim-dialog calculation calculatePrice" id="calculatePrice" >                            
+                            <div class="col-sm-6 clear-padding">
+                                <div class="steps">
+                                    <ul>
+                                        <li class="window-choose">
+                                            <i class="ico">1</i>
+                                            <label>{{ model.window.calculation.step[0].title }}</label>
+                                            <div class="images">
+                                                <div class="item">
+                                                    <img class="active" data-type="1" src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[0].images[0]}}" alt="" />
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="base">
+                                                        <img src="javascript:void(0)" data-type="2" class="base-img" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" alt="" />
+                                                        <div class="select-box">
+                                                            <img src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[0]}}" alt="" />
+                                                            <img src="javascript:void(0)" data-ng-src="images/calculation/{{model.window.calculation.step[0].list[1].images[1]}}" alt="" />
+                                                        </div>                                                
+                                                    </div>                                                
+                                                </div>
+
+                                                <div class="item">
+                                                    <img src="javascript:void(0)" data-type='3' data-ng-src="images/calculation/{{model.window.calculation.step[0].list[2].images[0]}}" alt="" />
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item2">
+                                            <i class="ico">2</i>
+                                            <label>{{ model.window.calculation.step[1].title }}</label>
+                                            <div class="base clearfix">
+                                                <div>{{model.window.calculation.step[1].dimensions[0]}} <input type="text" value="" class="win_height" /></div>
+                                                <div>{{model.window.calculation.step[1].dimensions[1]}} <input type="text" value="" class="win_width" /></div>
+                                            </div>
+                                        </li>
+                                        <li class="checkboxes">
+                                            <i class="ico">3</i>
+                                            <label>{{ model.window.calculation.step[2].title }}</label>
+                                            <div class="base">
+                                                <label data-ng-repeat="item in model.window.calculation.step[2].list">
+                                                    <i class="icon"></i>
+                                                    <input id="check{{$index}}" value="check{{$index}}" type="checkbox" name="check">   {{item}}
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 clear-padding">
+                                    <div class="form">
+                                        <div class="min-height">
+                                            <img src="javascript:void(0)" class="large" alt="" />
+                                        </div>
+                                        <div class="block-side">
+                                            <div class="div-form">
+                                                <form class="call-back-form">
+                                                    <ul class="ul-form">
+                                                        <li>
+                                                            <input type="text" class="people text-empty" required="" id="firstName2" name="firstName2" placeholder="{{model.form.text.firstName}}">
+                                                        </li>
+                                                        <li>
+                                                            <input type="tel" class="phone text-empty" required="" id="phone2" name="phone2" placeholder="{{model.form.text.phone}}">
+                                                        </li>
+                                                    </ul>
+                                                    <input type="submit" value="{{model.form.textButton}}" data-animated class="btn btn-primary uppercase">                                                    
+                                                </form>      
+                                            </div>
+                                            <div class="successfully"></div>
+                                        </div>
+                                    </div>
+                                </div>                
+</div>
+                    </div>
+                </div>
+        
         
                 <section id="catalog" class="row catalog">                    
                     <div class="topBackground">
@@ -284,7 +301,7 @@
                             </div>
 
                             <div class="block-btn text-center">
-<!--                                    <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>-->
+<!--                            <a href="" data-ng-href="{{model.catalog.download}}" class="btn btn-primary uppercase">{{model.catalog.button}}</a>-->
                                 <input type="submit" data-link="{{model.catalog.download}}" value="{{model.catalog.button}}" class="btn btn-primary uppercase download">                                                                        
                             </div>
                         </div>
@@ -367,7 +384,7 @@
                 <div class="section row block-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9111.254773378005!2d30.210550304192584!3d55.18652862280318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1455533612583" allowfullscreen=""></iframe>                    
                 </div>
-        
+                
         <footer class="row">
            <div class="container clearfix">
                <div class="col-sm-4 item clear-padding">
@@ -381,19 +398,21 @@
                <div class="col-sm-4 item  clear-padding">
                     <div class="will-call">
                        <i>{{model.contacts.phone}}</i>
-                       <a href="" class="call">{{model.form.wellCall}}</a>
+                       <a href="#callAnswer" class="call">{{model.form.wellCall}}</a>
                    </div>
                </div>    
            </div>   
         </footer>     
    </div>  
-        
-        <script type="text/javascript" src="scripts/jquery.min.js"></script>             
+            
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>       
+        <script type="text/javascript" src="scripts/libs.js"></script>     
+        <script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>     
         <script type="text/javascript" src="bower_components/fancybox/jquery.fancybox.pack.js"></script>             
         <script type="text/javascript" src="scripts/jquery.malihu.PageScroll2id.min.js"></script>                 
-        <script type="text/javascript" src="scripts/slick.min.js"></script>
-        <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="scripts/slick.min.js"></script>        
         <script type="text/javascript" src="scripts/bootstrap.js"></script>        
+        <script type="text/javascript" src="scripts/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>        
         <script type="text/javascript" src="scripts/scripts.js"></script>                
         
@@ -402,6 +421,6 @@
         <script type="text/javascript" src="scripts/app/models.js"></script>                        
         <script type="text/javascript" src="scripts/app/factories.js"></script>                     
         <script type="text/javascript" src="scripts/app/controllers.js"></script>                      
-        <script type="text/javascript" src="scripts/app/codeListFunctions.js"></script>                                        
+        <script type="text/javascript" src="scripts/app/codeListFunctions.js"></script>                 
 </body>
 </html>

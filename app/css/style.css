@@ -257,10 +257,25 @@ footer address{color:#636363;margin-bottom:0;font-size:18px;display:inline-block
 .modal-dialog{display:inline-block;text-align:left;vertical-align:middle;}
 .call-answer .thanks p.description{margin-top:55px;}
 .thanks p.description{width:240px;margin:0 auto;text-align:center;margin-top:40px;line-height:30px;}
-.btn-close{position:absolute;right:-42px;top:0;width:32px;height:32px;background:url("../images/icons/close.png") no-repeat;}
+
+button.mfp-close,
+.btn-close{position:absolute;right:-42px;top:0;width:32px;height:32px;background:url("../images/icons/close.png") no-repeat; font-size: 0;}
+
+button.mfp-close:hover,
 .btn-close:hover{background-position:left bottom;}
-.calculation{max-width:820px;min-height:597px;height:100%;background:url("../images/window.png") no-repeat;border-radius:0;}
-.calculation{padding-top:25px;}
+
+
+
+.calculation{
+    max-width:820px;min-height:597px;height:100%;background:url("../images/window.png") no-repeat;border-radius:0;
+    position: relative;
+    padding-top:25px;}
+
+.calculation button.mfp-close{
+    right: 5px;
+    top: 5px;
+}
+
 .steps li{position:relative;min-height:148px;border-bottom:1px solid #e1e1e1;margin-bottom:26px;}
 .steps li:last-child{border:none;}
 .steps .ico{display:block;width:55px;height:51px;position:absolute;left:0;top:0;color:#2185a7;font-size:24px;font-family:GothamPro-Black;line-height:51px;text-align:center;font-style:normal;background:url("../images/calculation/step.png") no-repeat;}
@@ -326,8 +341,11 @@ footer address{color:#636363;margin-bottom:0;font-size:18px;display:inline-block
 .header.fixit .navbar .topLevel{min-height:0;height:0px;}
 .header.fixit .navbar-collapse{background:#00bff3;}
 .header.fixit .topLevel .container{min-height:43px;}
-.header.fixit .navbar-header a.call{display:none;}
-.header.fixit .navbar-header i.call{display:block;font-size:28px;color:white;font-family:GothamPro-Bold;font-style:normal;height:24px;width:auto;line-height:50px;padding-left:20px;margin-bottom:13px;}
+
+.header .navbar-header i.telephone{display:none!important;}
+.header.fixit .navbar-header a.call{
+    display:block;font-size:28px;color:white;font-family:GothamPro-Bold;font-style:normal;height:24px;width:auto;line-height:50px;padding-left:20px;margin-bottom:13px;
+}
 .header.fixit .navbar-collapse.collapse{ height:50px; margin-top: -50px; padding-bottom: 50px; }
 
 .header.fixit .navbar-inverse .navbar-toggle:focus,
@@ -353,3 +371,6 @@ footer address{color:#636363;margin-bottom:0;font-size:18px;display:inline-block
 .iPad .solutions .col-sm-4:last-child{ width: 100%!important; }
 .iPad .solutions .image{ height: 300px;}
 .iPad .solutions .base .title-small { margin-bottom: 15px;}
+
+.call-answer .block-before{ padding-bottom: 21px}
+.mobile .popup-form .call-back-form{ width: 260px; margin: 0 auto;}

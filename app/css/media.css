@@ -290,7 +290,10 @@ footer .item:last-child{display:none;}
 
 .navbar-collapse.collapse{}
  
-    
+    .popup-form.call-answer{ 
+        margin-right: auto!important;
+        float: none;
+    }   
 }
 @media (max-width:400px){
     .main{width:400px;}
